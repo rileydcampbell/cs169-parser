@@ -34,33 +34,34 @@ class XfilesController < ApplicationController
       flash[:notice] = "Please attach a valid file"
       redirect_to new_xfile_path
     else
-      @xfile = @content.read
-      @name = params[:content].original_filename
-      @extension = @name.split('.').last
-      if @extension == "json"
-        @data = Crack::JSON.parse(@xfile)
-        @xfile = Xfile.create!(xfile_params) do |xfile|
-          xfile.content = @data
-          if xfile.name.empty?
-            xfile.name = params[:content].original_filename
+      params[:content].each do |file|
+        @xfile = file.read
+        @name = file.original_filename
+        @extension = @name.split('.').last
+        if @extension == "json"
+          @data = Crack::JSON.parse(@xfile)
+          @xfile = Xfile.create!(xfile_params) do |xfile|
+            xfile.content = @data
+            if xfile.name.empty?
+              xfile.name = @name
+            end
           end
-        end
-        flash[:notice] = "#{@xfile.name} was successfully created."
-        redirect_to xfiles_path
-      elsif @extension == "xml"
-        @data = Crack::XML.parse(@xfile)
-        @xfile = Xfile.create!(xfile_params) do |xfile|
-          xfile.content = @data
-          if xfile.name.empty?
-            xfile.name = params[:content].original_filename
+          flash[:notice] = "#{@xfile.name} was successfully created."
+        elsif @extension == "xml"
+          @data = Crack::XML.parse(@xfile)
+          @xfile = Xfile.create!(xfile_params) do |xfile|
+            xfile.content = @data
+            if xfile.name.empty?
+              xfile.name = @name
+            end
           end
+          flash[:notice] = "#{@xfile.name} was successfully created."
+        else
+          flash[:notice] = "Incompatible file type, please attach a valid file"
+          redirect_to new_xfile_path
         end
-        flash[:notice] = "#{@xfile.name} was successfully created."
-        redirect_to xfiles_path
-      else
-        flash[:notice] = "Incompatible file type, please attach a valid file"
-        redirect_to new_xfile_path
       end
+      redirect_to xfiles_path
     end
   end
 

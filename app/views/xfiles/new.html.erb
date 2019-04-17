@@ -2,8 +2,8 @@
 <%= form_tag xfiles_path, multipart: true do %>
   <%= label :xfile, :name, 'File Name' %>
   <%= text_field :xfile, 'name' %>
-  <%= label :xfile, :content, 'File' %>
-  <%= file_field_tag :content %>
+  <%= label :xfile, 'content', 'File' %>
+  <%= file_field_tag 'content[]', :multiple => true %>
   <%= submit_tag 'import' %>
 <% end %>
 <%= link_to 'Back to file list', xfiles_path %>
