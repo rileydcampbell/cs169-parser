@@ -93,27 +93,30 @@ class XfilesController < ApplicationController
   end
 
   def shared_props
-    prop_sets = []
-    xfile_ids = params[:xfile_ids].chars
-    xfile_ids.each do |id|
-      current_xfile = Xfile.find(id.to_i)
-      content = eval(current_xfile.content)
-      properties = Xfile.get_properties(content)
-      puts("content: ",content)
-      prop_sets.push(properties)
+    xfile_ids = params[:xfile_id]
+    if xfile_ids.nil?
+      redirect_to xfiles_path
+    else
+      prop_sets = []
+      xfile_ids.each do |id|
+        current_xfile = Xfile.find(id.to_i)
+        content = current_xfile.content
+        properties = Xfile.get_properties_from_string(content)
+        prop_sets.push(properties)
+      end
+      @shared_set = prop_sets[0]
+      prop_sets.each do |set|
+        @shared_set = @shared_set & set
+      end
+      render 'shared_props'
     end
-    @shared_set = prop_sets[0]
-    prop_sets.each do |set|
-      @shared_set = @shared_set & set
-    end
-    puts("shared set: ", @shared_set)
   end
 
   def download_xfile
     id = params[:id]
     @xfile = Xfile.find(id)
     content = @xfile.content
-    # f = File.new("#{Rails.root}/app/assets/docs/#{@xfile.name}.json", "w+")     
+    # f = File.new("#{Rails.root}/app/assets/docs/#{@xfile.name}.json", "w+")
     # f.write(eval(@xfile.content).to_json)
     # f.close
     data = eval(@xfile.content).to_json
