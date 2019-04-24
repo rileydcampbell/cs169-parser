@@ -89,7 +89,7 @@ class XfilesController < ApplicationController
 
   def shared_files
     prop = params[:prop]
-    
+
     @xfiles = Xfile.where("content like ?", "%\"#{prop}\"%")
     render 'shared_files'
   end
