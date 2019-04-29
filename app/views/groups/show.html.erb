@@ -12,7 +12,7 @@
       </div>
     <% end %>
   </div>
-
+<%= button_to 'Delete File', group_path(@group), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
 <%= link_to 'Back to Group List', groups_path %>
 <%= link_to 'Back to File List', xfiles_path %>
 

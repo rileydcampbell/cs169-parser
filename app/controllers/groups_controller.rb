@@ -52,6 +52,14 @@ class GroupsController < ApplicationController
   def update
   end
 
+  #To delete group from database.
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    flash[:notice] = "File '#{group.name}' deleted."
+    redirect_to groups_path
+  end
+
 
 end
 
