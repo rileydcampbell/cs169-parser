@@ -5,8 +5,8 @@
     Edit File
   </div>
   <%= form_tag edit_post_path(@id) do %>
-    <%= label_tag 'Key' %>
-    <%= text_field_tag :property, @prop[0], disabled: true %>
+    <%= label_tag :xfile, :property %>
+    <%= text_field_tag :property, @prop[0], readonly: true %>
 
     <%= label_tag(:xfile, :value) %>
     <%= text_field_tag :value, @prop[1] %>

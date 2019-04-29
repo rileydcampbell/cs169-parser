@@ -76,6 +76,8 @@ class XfilesController < ApplicationController
   end
 
   def edit_file(xfile, prop, val)
+    puts "value should not be nil and " + val
+    puts "property should not be nil and " + prop
     data = xfile.content
     data = eval(data)
     data[prop] = val
@@ -87,9 +89,10 @@ class XfilesController < ApplicationController
     id = params[:id] # retrieve movie ID from URI route
     edit_file(Xfile.find(id), params[:property], params[:value])
 
-    group_id.each do |group|
+    params[:group_id].each do |group_id|
+      group = Group.find(group_id)
       group.xfiles.each do |xfile|
-        edit_file(Xfile.find(id), params[:property], params[:value])
+        edit_file(xfile, params[:property], params[:value])
       end
     end
 
