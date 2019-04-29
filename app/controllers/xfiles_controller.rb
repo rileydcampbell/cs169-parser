@@ -14,6 +14,7 @@ class XfilesController < ApplicationController
     @xfile = Xfile.find(id) # look up xfile by unique ID
     @content = eval(@xfile.content)
     @properties = Xfile.get_properties(@content)
+    @groups = @xfile.groups
     puts "properties: " + @properties.to_s
 
   end
@@ -66,22 +67,39 @@ class XfilesController < ApplicationController
     end
   end
 
-  #To edit the file, but not really necessary at the moment.
+  #To edit the file, should populate a table of its group.
   def edit
-    params[:property]
+    @id = params[:id]
+    @xfile = Xfile.find(@id)
+    @prop = params[:prop]
+    @groups = @xfile.groups
   end
 
+  def edit_file(xfile, prop, val)
+    puts "value should not be nil and " + val
+    puts "property should not be nil and " + prop
+    data = xfile.content
+    data = eval(data)
+    data[prop] = val
+    xfile.update!(name: xfile.name, content: data)
+  end
+
+  #Edit both selected files and its group
   def edit_post
     id = params[:id] # retrieve movie ID from URI route
-    @xfile = Xfile.find(id) # look up movie by unique ID
-    data = @xfile.content
-    data = eval(data)
-    key = params[:property]
-    value = params[:value]
-    data[key] = value
-    @xfile = Xfile.create!(name: @xfile.name, content: data)
+    edit_file(Xfile.find(id), params[:property], params[:value])
+
+    params[:group_id].each do |group_id|
+      group = Group.find(group_id)
+      group.xfiles.each do |xfile|
+        edit_file(xfile, params[:property], params[:value])
+      end
+    end
+
     redirect_to xfiles_path
   end
+
+
 
   #To update the file, but also not necessary at the moment.
   def update
