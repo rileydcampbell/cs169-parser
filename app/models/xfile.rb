@@ -1,5 +1,6 @@
 class Xfile < ActiveRecord::Base
   has_and_belongs_to_many :groups
+
   require 'crack' # XML and JSON parsingrequire 'crack/json' # Only JSON parsing
   require 'crack/xml' # Only XML parsing
   require 'json'

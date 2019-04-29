@@ -10,8 +10,8 @@ class XfilesController < ApplicationController
 
   #To show the data fields and their relationships in a data file.
   def show
-    id = params[:id] # retrieve movie ID from URI route
-    @xfile = Xfile.find(id) # look up movie by unique ID
+    id = params[:id] # retrieve xfile ID from URI route
+    @xfile = Xfile.find(id) # look up xfile by unique ID
     @content = eval(@xfile.content)
     @properties = Xfile.get_properties(@content)
     puts "properties: " + @properties.to_s
@@ -124,7 +124,7 @@ class XfilesController < ApplicationController
     # f = File.new("#{Rails.root}/app/assets/docs/#{@xfile.name}.json", "w+")
     # f.write(eval(@xfile.content).to_json)
     # f.close
-    data = eval(@xfile.content).to_json
+    data = eval(content).to_json
     send_data data, :filename => "#{@xfile.name}.json"
     # send_file "#{Rails.root}/app/assets/docs/#{@xfile.name}.json", type: "application/json", x_sendfile: true
     flash[:notice] = "#{@xfile.name} was successfully downloaded."

@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190428234901) do
-
-  create_table "group_xfiles", id: false, force: :cascade do |t|
-    t.integer "group_id"
-    t.integer "xfile_id"
-  end
-
-  add_index "group_xfiles", ["group_id"], name: "index_group_xfiles_on_group_id"
-  add_index "group_xfiles", ["xfile_id"], name: "index_group_xfiles_on_xfile_id"
+ActiveRecord::Schema.define(version: 20190429014433) do
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "groups_xfiles", id: false, force: :cascade do |t|
+    t.integer "group_id"
+    t.integer "xfile_id"
+  end
+
+  add_index "groups_xfiles", ["group_id"], name: "index_groups_xfiles_on_group_id"
+  add_index "groups_xfiles", ["xfile_id"], name: "index_groups_xfiles_on_xfile_id"
 
   create_table "xfiles", force: :cascade do |t|
     t.string "name"
