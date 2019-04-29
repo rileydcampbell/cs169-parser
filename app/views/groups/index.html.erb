@@ -1,0 +1,23 @@
+<% #  This file is app/views/groups/index.html.erb %>
+
+<div class="content-container">
+  <div class="label_title">
+    Groups
+  </div>
+  <%= form_tag shared_props_path,:id => "xfile_form", :method => :get do %>
+    <table id="groups">
+      <tbody>
+      <% @groups.each do |group| %>
+        <tr class="drop-shadow">
+          <td id="<%= "group_#{group.id}".to_s %>">
+            <%= link_to "More about #{group.name}", group_path(group) %>\
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% end %>
+  <br>
+  <%= link_to 'Add New Group', new_group_path %>
+</div>
+<%= link_to 'Back to File List', xfiles_path %>
