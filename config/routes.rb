@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  resources :groups do
 
+  end
   resources :xfiles do
     # collection do
     #   get'shared_props'
