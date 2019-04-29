@@ -1,0 +1,20 @@
+<h1>Create New Group</h1>
+<%= form_tag groups_path, multipart: true do %>
+  <%= label :group, :name, 'Group Name' %>
+  <%= text_field :group, 'name' %>
+
+  <div class="label_title">
+    Files
+    <% @file_names.each do |xfile| %>
+      <div class="drop-shadow">
+        <%= check_box_tag 'xfile_id[]', xfile.id -%>
+        <%= link_to xfile.name, xfile_path(xfile) %>
+      </div>
+  <% end %>
+    <%= submit_tag 'Create' %>
+  </div>
+
+<% end %>
+<%= link_to 'Back to Group List', groups_path %>
+<%= link_to 'Back to File List', xfiles_path %>
+

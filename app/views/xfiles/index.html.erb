@@ -4,8 +4,8 @@
   <div class="label_title">
     Uploaded Files
   </div>
-  <table id="jsonfiles">
     <%= form_tag shared_props_path,:id => "xfile_form", :method => :get do %>
+    <table id="jsonfiles">
     <tbody>
       <% @xfiles.each do |xfile| %>
         <tr class="drop-shadow">
@@ -17,9 +17,11 @@
         </tr>
         <% end %>
     </tbody>
+    </table>
     <% end %>
-  </table>
   <%= link_to 'Get Shared Properties', "", :onclick => "$('#xfile_form').submit()" %>
   <br>
   <%= link_to 'Add new File', new_xfile_path %>
+  <br>
+  <%= link_to 'Group List', groups_path %>
 </div>

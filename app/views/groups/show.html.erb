@@ -1,0 +1,18 @@
+<h1>Group</h1>
+
+<div class="card-header">
+  <%= @group.name %>
+</div>
+
+  <div class="label_title">
+    Files
+    <% @xfiles.each do |xfile| %>
+      <div class="drop-shadow">
+        <%= link_to xfile.name, xfile_path(xfile) %>
+      </div>
+    <% end %>
+  </div>
+
+<%= link_to 'Back to Group List', groups_path %>
+<%= link_to 'Back to File List', xfiles_path %>
+
