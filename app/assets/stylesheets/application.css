@@ -22,9 +22,8 @@ div#main {
 }
 a {
     background: transparent;
-    color: midnightblue;
-    text-decoration: underline;
-    font-weight: bold;
+    color: var(--secondary-blue);
+    text-decoration: none;
 }
 h1 {
     color: cornflowerblue;
@@ -64,6 +63,13 @@ table#jsonfiles th, table#jsonfiles td {
 table#jsonfiles th.hilite {
     background-color: yellow;
 }
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+
 #notice #warning {
     background: rosybrown;
     margin: 1em 0;
@@ -207,6 +213,15 @@ button,
 .prop_container {
     display: flex; /* or inline-flex */
     flex-wrap: wrap;
+}
+
+.table {
+    background-color: white;
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 20px 40px;
 }
 
 /* ------------------------------- Begin Style for d3 View ------------------------------------ */
