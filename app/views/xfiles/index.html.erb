@@ -7,6 +7,7 @@
     <%= form_tag shared_props_path,:id => "xfile_form", :method => :get do %>
     <table id="jsonfiles">
     <tbody>
+
       <% @xfiles.each do |xfile| %>
         <tr class="drop-shadow">
           <td id="<%= "xfile_#{xfile.id}".to_s %>">
@@ -19,8 +20,11 @@
     </tbody>
     </table>
     <% end %>
-
-  <%= link_to 'Add new File', new_xfile_path %>
+  <a href="/xfiles/new">
+    <div class="button primary drop-shadow">
+     New File
+    </div>
+  </a>
 
   <div class="label_title">
     Shared Properties
@@ -33,11 +37,24 @@
           Key
         </span>
       </td>
+      <td>
+        <span style="font-weight: bold;">
+          Number of Files
+        </span>
+      </td>
+      <td>
+        <span style="font-weight: bold;">
+
+        </span>
+      </td>
     </tr>
     <% @shared_set.each do |property|  %>
     <tr>
       <td>
         <%= property %>
+      </td>
+      <td>
+        Placeholder number
       </td>
       <td>
         <%= link_to "edit", shared_files_path(property) %>
