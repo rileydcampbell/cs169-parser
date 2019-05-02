@@ -19,9 +19,10 @@
   </div>
 
   <div class="prop_container">
-    <% @shared_set.each do |prop| %>
+    <% @shared_set.each do |prop, count| %>
       <div class="prop-button drop-shadow">
         <%= link_to "#{prop}", shared_files_path(prop[0]) %>
+        <%= count %>
       </div>
     <% end %>
   </div>
