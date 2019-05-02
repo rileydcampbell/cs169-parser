@@ -117,20 +117,31 @@ class XfilesController < ApplicationController
     if xfile_ids.nil?
       redirect_to xfiles_path
     else
-      prop_sets = []
+      prop_sets = Hash.new()
       @file_names = []
       xfile_ids.each do |id|
         current_xfile = Xfile.find(id.to_i)
         content = current_xfile.content
         properties = Xfile.get_properties_from_string(content)
-        prop_sets.push(properties)
+        properties.each do |prop|
+          if prop_sets.key?(prop)
+            prop_sets[prop] += 1
+          else
+            prop_sets[prop] = 1
+          end
+        end
         @file_names.append(current_xfile)
       end
-      @shared_set = prop_sets[0]
-
-      prop_sets.each do |set|
-        @shared_set = @shared_set & set
+      non_unique_props = Hash.new()
+      prop_sets.each_pair do |prop, count|
+        if count > 1
+          non_unique_props[prop] = count
+        end
       end
+      @shared_set = non_unique_props
+      # prop_sets.each do |set|
+      #   @shared_set = @shared_set & set
+      # end
       render 'shared_props'
     end
   end
