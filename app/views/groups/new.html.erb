@@ -4,7 +4,7 @@
   <%= text_field :group, 'name' %>
 
   <div class="label_title">
-    Files
+    Files (Select Files)
     <% @file_names.each do |xfile| %>
       <div class="drop-shadow">
         <%= check_box_tag 'xfile_id[]', xfile.id -%>
