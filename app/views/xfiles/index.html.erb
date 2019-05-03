@@ -48,16 +48,16 @@
         </span>
       </td>
     </tr>
-    <% @shared_set.each do |property|  %>
+    <% @shared_set.each_pair do |property, number|  %>
     <tr>
       <td>
         <%= property %>
       </td>
       <td>
-        Placeholder number
+        <%= number %>
       </td>
       <td>
-        <%= link_to "edit", shared_files_path(property) %>
+        <%= link_to "view", shared_files_path(property) %>
       </td>
     </tr>
     <% end %>

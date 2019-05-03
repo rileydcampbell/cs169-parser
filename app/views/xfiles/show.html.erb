@@ -37,34 +37,6 @@
   </table>
 
 
-  <table>
-    <tr>
-      <th>
-        Key
-      </th>
-      <th>
-        Value
-      </th>
-    </tr>
-
-
-      <% @properties.each do |prop| %>
-      <tr>
-        <td>
-          <%= prop[0] %>
-        </td>
-        <td>
-          <%= prop[1] %>
-        </td>
-        <td>
-          <%= link_to "edit", edit_xfile_path(@xfile.id, prop: prop) %>
-        </td>
-      </tr>
-      <% end %>
-
-  </table>
-
-
   <div class="label_title">
     Properties
   </div>
