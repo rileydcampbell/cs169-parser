@@ -1,7 +1,7 @@
-<h1>Create New Group</h1>
+<h1>Create New Group with this Property: <%= @key %></h1>
 <%= form_tag groups_path, multipart: true do %>
-  <%= label :group, :name, 'Group Name' %>
-  <%= text_field :group, 'name' %>
+  <%= label :name, 'Group Name' %>
+  <%= text_field :name, nil, placeholder: 'name of the group'%>
 
   <div class="label_title">
     Files (Select Files)
@@ -11,6 +11,7 @@
         <%= link_to xfile.name, xfile_path(xfile) %>
       </div>
   <% end %>
+    <%= hidden_field_tag :prop , @key %>
     <%= submit_tag 'Create' %>
   </div>
 

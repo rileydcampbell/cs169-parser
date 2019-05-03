@@ -85,8 +85,8 @@ class XfilesController < ApplicationController
 
   #Edit both selected files and its group
   def edit_post
-    id = params[:id] # retrieve movie ID from URI route
-    edit_file(Xfile.find(id), params[:property], params[:value])
+    # id = params[:id] # retrieve movie ID from URI route
+    # edit_file(Xfile.find(id), params[:property], params[:value])
 
     params[:group_id].each do |group_id|
       group = Group.find(group_id)
@@ -128,7 +128,7 @@ class XfilesController < ApplicationController
       shared_set = shared_set & set
     end
 
-    @shared_set = shared_set
+    @shared_set = shared_set.nil? ? [] : shared_set
 
   end
 
