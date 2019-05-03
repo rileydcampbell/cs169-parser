@@ -1,4 +1,4 @@
-class GroupsController < ApplicationController
+mclass GroupsController < ApplicationController
 
   def group_params
     params.require(:group).permit(:name, :xfile_id)

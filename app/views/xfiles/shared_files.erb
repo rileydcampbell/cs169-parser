@@ -2,7 +2,7 @@
 
 <div class="content-container">
   <div class="label_title">
-    Similar files
+    Files with this property
   </div>
   <%= form_tag new_group_path,:id => "group_form", :method => :get do %>
     <table id="jsonfiles">
@@ -11,7 +11,7 @@
          <tr class="drop-shadow">
            <td>
              <%= check_box_tag 'xfile_id[]', xfile.id -%>
-             <%= link_to "More about #{xfile.name}", xfile_path(xfile) %>
+             <%= link_to "#{xfile.name}", xfile_path(xfile) %>
           </td>
         </tr>
       <% end %>
