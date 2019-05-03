@@ -1,4 +1,4 @@
-mclass GroupsController < ApplicationController
+class GroupsController < ApplicationController
 
   def group_params
     params.require(:group).permit(:name, :xfile_id)
@@ -18,6 +18,9 @@ mclass GroupsController < ApplicationController
       content = current_xfile.content
       @file_names.append(current_xfile)
     end
+    puts 'hello'
+    puts params[:prop]
+    @key = params[:prop]
     render 'new'
 
   end
@@ -25,8 +28,9 @@ mclass GroupsController < ApplicationController
   #To create a new group
   def create
     xfile_ids = params[:xfile_id]
-    name = params[:group][:name]
-    @group = Group.create!(:name => name)
+    prop = params[:prop]
+    name = params[:name]
+    @group = Group.create!(:name => name, :prop => prop)
     xfile_ids.each do |id|
       xfile = Xfile.find(id.to_i)
       @group.xfiles << xfile

@@ -2,9 +2,9 @@
 
 <div class="content-container">
   <div class="label_title">
-    Files with this property
+    Files with this property: <%= @prop%>
   </div>
-  <%= form_tag new_group_path,:id => "group_form", :method => :get do %>
+  <%= form_tag new_group_path, :id => "group_form", :method => :get do %>
     <table id="jsonfiles">
       <tbody>
        <% @xfiles.each do |xfile| %>
@@ -17,7 +17,12 @@
       <% end %>
      </tbody>
     </table>
+    <%= hidden_field_tag :prop , @prop %>
   <% end %>
-  <%= link_to 'All files', xfiles_path %>
-  <%= link_to 'Add New Group', "", :onclick => "$('#group_form').submit()" %>
+  <div class="label_title">
+    Groups with this property: <%= @prop%>
+  </div>
+
+  <%= link_to 'All files', xfiles_path, class: "button primary drop-shadow" %>
+  <%= link_to 'Add New Group', "", :onclick => "$('#group_form').submit()", class: "button primary drop-shadow" %>
 </div>

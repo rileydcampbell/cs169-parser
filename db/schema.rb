@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190429014433) do
+ActiveRecord::Schema.define(version: 20190503201222) do
 
   create_table "groups", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "prop"
   end
 
   create_table "groups_xfiles", id: false, force: :cascade do |t|
