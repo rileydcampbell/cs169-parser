@@ -15,13 +15,13 @@ class Xfile < ActiveRecord::Base
     if h.is_a?(Hash)
       h.each_pair do |key, val|
         if new_array.exclude?(key) and !val.is_a?(Hash) and !val.is_a?(Array) # make sure it's simple
-          new_array.push(key[0])
-        end
-        new_keys = get_properties(val)
-        new_keys.each do |pair|
-          key = pair[0]
-          if new_array.exclude?(key)
-            new_array.push(key[0])
+          new_array.push(key)
+        else
+          new_keys = get_properties(val)
+          new_keys.each do |key|
+            if new_array.exclude?(key)
+              new_array.push(key)
+            end
           end
         end
       end

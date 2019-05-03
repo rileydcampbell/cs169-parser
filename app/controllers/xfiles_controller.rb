@@ -123,6 +123,7 @@ class XfilesController < ApplicationController
 
     shared_set = prop_sets[0]
 
+
     prop_sets.each do |set|
       shared_set = shared_set & set
     end
