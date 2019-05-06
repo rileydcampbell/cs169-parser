@@ -7,21 +7,65 @@
     <%= form_tag shared_props_path,:id => "xfile_form", :method => :get do %>
     <table id="jsonfiles">
     <tbody>
+
       <% @xfiles.each do |xfile| %>
         <tr class="drop-shadow">
           <td id="<%= "xfile_#{xfile.id}".to_s %>">
             <%= check_box_tag 'xfile_id[]', xfile.id -%>
-            <%= link_to "More about #{xfile.name}", xfile_path(xfile) %>\
-            <%= link_to "Download #{xfile.name}", download_xfile_path(xfile), data: { turbolinks: false } %>
+            <%= link_to "#{xfile.name}", xfile_path(xfile) %>
+            <%= link_to "Download", download_xfile_path(xfile), data: { turbolinks: false } %>
           </td>
         </tr>
         <% end %>
     </tbody>
     </table>
     <% end %>
-  <%= link_to 'Get Shared Properties', "", :onclick => "$('#xfile_form').submit()" %>
+  <a href="/xfiles/new">
+    <div class="button primary drop-shadow">
+     New File
+    </div>
+  </a>
+
+  <div class="label_title">
+    Shared Properties
+  </div>
+
+  <table class="table drop-shadow">
+    <tr>
+      <td>
+        <span style="font-weight: bold;">
+          Key
+        </span>
+      </td>
+      <td>
+        <span style="font-weight: bold;">
+          Number of Files
+        </span>
+      </td>
+      <td>
+        <span style="font-weight: bold;">
+
+        </span>
+      </td>
+    </tr>
+    <% @shared_set.each do |property|  %>
+    <tr>
+      <td>
+        <%= property %>
+      </td>
+      <td>
+        Placeholder number
+      </td>
+      <td>
+        <%= link_to "edit", shared_files_path(property) %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+
+  <%#= link_to 'Get Shared Properties', "", :onclick => "$('#xfile_form').submit()" %>
   <br>
-  <%= link_to 'Add new File', new_xfile_path %>
+
   <br>
-  <%= link_to 'Group List', groups_path %>
+  <%#= link_to 'Group List', groups_path %>
 </div>

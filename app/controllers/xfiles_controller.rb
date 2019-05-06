@@ -15,13 +15,12 @@ class XfilesController < ApplicationController
     @content = eval(@xfile.content)
     @properties = Xfile.get_properties(@content)
     @groups = @xfile.groups
-    puts "properties: " + @properties.to_s
-
   end
 
   #To show the list of files uploaded to the application.
   def index
     @xfiles = Xfile.all
+    @shared_set = get_shared_props(Xfile.ids)
   end
 
   # default: render 'new' template
@@ -86,8 +85,8 @@ class XfilesController < ApplicationController
 
   #Edit both selected files and its group
   def edit_post
-    id = params[:id] # retrieve movie ID from URI route
-    edit_file(Xfile.find(id), params[:property], params[:value])
+    # id = params[:id] # retrieve movie ID from URI route
+    # edit_file(Xfile.find(id), params[:property], params[:value])
 
     params[:group_id].each do |group_id|
       group = Group.find(group_id)
@@ -106,10 +105,31 @@ class XfilesController < ApplicationController
   end
 
   def shared_files
-    prop = params[:prop]
-
-    @xfiles = Xfile.where("content like ?", "%\"#{prop}\"%")
+    @prop = params[:prop]
+    @xfiles = Xfile.where("content like ?", "%\"#{@prop}\"%")
     render 'shared_files'
+  end
+
+  def get_shared_props(xfile_ids)
+    prop_sets = []
+    @file_names = []
+    xfile_ids.each do |id|
+      current_xfile = Xfile.find(id.to_i)
+      content = current_xfile.content
+      properties = Xfile.get_properties_from_string(content)
+      prop_sets.push(properties)
+      @file_names.append(current_xfile)
+    end
+
+    shared_set = prop_sets[0]
+
+
+    prop_sets.each do |set|
+      shared_set = shared_set & set
+    end
+
+    @shared_set = shared_set.nil? ? [] : shared_set
+
   end
 
   def shared_props
@@ -117,20 +137,29 @@ class XfilesController < ApplicationController
     if xfile_ids.nil?
       redirect_to xfiles_path
     else
-      prop_sets = []
+      prop_sets = Hash.new()
       @file_names = []
       xfile_ids.each do |id|
         current_xfile = Xfile.find(id.to_i)
         content = current_xfile.content
         properties = Xfile.get_properties_from_string(content)
-        prop_sets.push(properties)
+        properties.each do |prop|
+          if prop_sets.key?(prop)
+            prop_sets[prop] += 1
+          else
+            prop_sets[prop] = 1
+          end
+        end
         @file_names.append(current_xfile)
       end
-      @shared_set = prop_sets[0]
-
-      prop_sets.each do |set|
-        @shared_set = @shared_set & set
+      non_unique_props = Hash.new()
+      prop_sets.each_pair do |prop, count|
+        if count > 1
+          non_unique_props[prop] = count
+        end
       end
+      @shared_set = non_unique_props
+
       render 'shared_props'
     end
   end
