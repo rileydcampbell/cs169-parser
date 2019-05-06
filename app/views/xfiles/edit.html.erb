@@ -12,19 +12,18 @@
     <%= text_field_tag :value, @prop[1] %>
 
     <div class="label_title">
-      Groups to Edit
-      <% @groups.each do |group| %>
+      Group to Edit
         <div class="drop-shadow">
-          <%= check_box_tag 'group_id[]', group.id -%>
-          <%= group.name -%>
+          <%= check_box_tag 'group_id[]', @group.id, true-%>
+          <%= @group.name -%>
         </div>
-      <% end %>
     </div>
-    <%= submit_tag 'save' %>
+    <br>
+    <%= submit_tag 'save' , :class => "button primary drop-shadow"%>
   <% end %>
 
   <div class="back">
-    <%= link_to 'Back to file list', xfiles_path %>
+    <%= link_to 'Back to All Files', xfiles_path %>
   </div>
 
 </div>

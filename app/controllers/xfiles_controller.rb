@@ -75,7 +75,8 @@ class XfilesController < ApplicationController
     @id = params[:id]
     @xfile = Xfile.find(@id)
     @prop = params[:prop]
-    @groups = @xfile.groups
+    @group_id = params[:groupid]
+    @group = Group.find(@group_id)
   end
 
   def edit_file(xfile, prop, val)
@@ -111,6 +112,7 @@ class XfilesController < ApplicationController
   def shared_files
     @prop = params[:prop]
     @xfiles = Xfile.where("content like ?", "%\"#{@prop}\"%")
+    @groups = Group.where("prop = ?", @prop.to_s)
     render 'shared_files'
   end
 
