@@ -12,7 +12,7 @@
     <%= text_field_tag :value, @prop[1] %>
 
     <div class="label_title">
-      Groups to edit
+      Groups to Edit
       <% @groups.each do |group| %>
         <div class="drop-shadow">
           <%= check_box_tag 'group_id[]', group.id -%>
@@ -26,6 +26,5 @@
   <div class="back">
     <%= link_to 'Back to file list', xfiles_path %>
   </div>
-
 
 </div>

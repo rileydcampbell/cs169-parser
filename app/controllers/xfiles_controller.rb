@@ -20,7 +20,11 @@ class XfilesController < ApplicationController
   #To show the list of files uploaded to the application.
   def index
     @xfiles = Xfile.all
-    @shared_set = get_shared_props(Xfile.ids)
+    shared_props(Xfile.ids)
+    if @xfiles.empty?
+      shared_props = {}
+    end
+
   end
 
   # default: render 'new' template
@@ -132,11 +136,7 @@ class XfilesController < ApplicationController
 
   end
 
-  def shared_props
-    xfile_ids = params[:xfile_id]
-    if xfile_ids.nil?
-      redirect_to xfiles_path
-    else
+  def shared_props(xfile_ids)
       prop_sets = Hash.new()
       @file_names = []
       xfile_ids.each do |id|
@@ -157,11 +157,8 @@ class XfilesController < ApplicationController
         if count > 1
           non_unique_props[prop] = count
         end
-      end
       @shared_set = non_unique_props
-
-      render 'shared_props'
-    end
+      end
   end
 
   def download_xfile

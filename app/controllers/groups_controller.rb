@@ -7,20 +7,16 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.all
+    if @groups.empty?
+      flash[:notice] = "No groups created yet."
+    end
   end
 
   #Render new template
   def new
-    xfile_ids = params[:xfile_id]
-    @file_names = []
-    xfile_ids.each do |id|
-      current_xfile = Xfile.find(id.to_i)
-      content = current_xfile.content
-      @file_names.append(current_xfile)
-    end
-    puts 'hello'
+    @prop = params[:prop]
+    @xfiles = Xfile.where("content like ?", "%\"#{@prop}\"%")
     puts params[:prop]
-    @key = params[:prop]
     render 'new'
 
   end
@@ -29,8 +25,12 @@ class GroupsController < ApplicationController
   def create
     xfile_ids = params[:xfile_id]
     prop = params[:prop]
-    name = params[:name]
-    @group = Group.create!(:name => name, :prop => prop)
+    @group = Group.create!(group_params) do |group|
+      if group.name.empty?
+        group.name = "Group #{prop}"
+      end
+      group.prop = prop
+    end
     xfile_ids.each do |id|
       xfile = Xfile.find(id.to_i)
       @group.xfiles << xfile
@@ -50,10 +50,19 @@ class GroupsController < ApplicationController
     @group = Group.find_by(:id => id)
     @xfiles = @group.xfiles
 
+
   end
 
   #To update the file, but also not necessary at the moment.
   def update
+  end
+
+  #To delete group from database.
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    flash[:notice] = "File '#{@group.name}' deleted."
+    redirect_to groups_path
   end
 
 
