@@ -21,8 +21,20 @@
     </div>
 
   <div class="label_title">
-    Graph of Properties
+    Groups
   </div>
+
+  <table>
+
+    <% @groups.each do |group| %>
+      <tr>
+        <div class="drop-shadow">
+          <%= link_to group.name, group_path(group) %>
+        </div>
+      </tr>
+    <% end %>
+
+  </table>
 
 
   <table>
@@ -44,25 +56,14 @@
         <td>
           <%= prop[1] %>
         </td>
+        <td>
+          <%= link_to "edit", edit_xfile_path(@xfile.id, prop: prop) %>
+        </td>
       </tr>
       <% end %>
 
   </table>
 
-
-
-  <div class="label_title">
-    Edit File
-  </div>
-  <%= form_tag edit_post_path(@xfile.id) do %>
-    <%= label_tag(:xfile, :property) %>
-    <%= text_field_tag(:property) %>
-
-
-    <%= label_tag(:xfile, :value) %>
-    <%= text_field_tag(:value) %>
-    <%= submit_tag 'save' %>
-  <% end %>
 
   <div class="label_title">
     Properties
@@ -75,7 +76,7 @@
   <div class="prop_container">
     <% @properties.each do |prop| %>
       <div class="prop-button drop-shadow">
-        <%= link_to "#{prop}", shared_files_path(prop[0]) %>
+        <%= link_to "#{prop[0]}", shared_files_path(prop[0]) %>
       </div>
     <% end %>
   </div>

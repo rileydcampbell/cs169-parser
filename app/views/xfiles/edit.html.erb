@@ -1,0 +1,31 @@
+<% # in app/views/jsonfiles/show.html.haml %>
+<div class="content-container">
+
+  <div class="label_title">
+    Edit File
+  </div>
+  <%= form_tag edit_post_path(@id) do %>
+    <%= label_tag :xfile, :property %>
+    <%= text_field_tag :property, @prop[0], readonly: true %>
+
+    <%= label_tag(:xfile, :value) %>
+    <%= text_field_tag :value, @prop[1] %>
+
+    <div class="label_title">
+      Groups to edit
+      <% @groups.each do |group| %>
+        <div class="drop-shadow">
+          <%= check_box_tag 'group_id[]', group.id -%>
+          <%= group.name -%>
+        </div>
+      <% end %>
+    </div>
+    <%= submit_tag 'save' %>
+  <% end %>
+
+  <div class="back">
+    <%= link_to 'Back to file list', xfiles_path %>
+  </div>
+
+
+</div>
