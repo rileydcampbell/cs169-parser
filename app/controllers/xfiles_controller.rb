@@ -22,7 +22,7 @@ class XfilesController < ApplicationController
     @xfiles = Xfile.all
     shared_props(Xfile.ids)
     if @xfiles.empty?
-      shared_props = {}
+      @shared_set = {}
     end
 
   end
