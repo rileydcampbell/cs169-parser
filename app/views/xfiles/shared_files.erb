@@ -19,10 +19,27 @@
     </table>
     <%= hidden_field_tag :prop , @prop %>
   <% end %>
+
   <div class="label_title">
     Groups with this property: <%= @prop%>
   </div>
+    <table id="jsonfiles">
+      <tbody>
+      Click group for more info
+      <% @groups.each do |group| %>
+      <tr class="drop-shadow">
+        <td>
+          <%= link_to "#{group.name}", group_path(group) %>
+        </td>
+      </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-  <%= link_to 'Back to All Files', xfiles_path, class: "button primary drop-shadow" %>
-  <%= link_to 'Create New Group', new_group_path(:prop => @prop), class: "button primary drop-shadow" %>
+<div>
+  <%= link_to 'Create New Group', new_group_path(:prop => @prop), :class => "button primary drop-shadow" %>
+  <br>
+  <%= link_to 'Back to All Files', xfiles_path %>
 </div>
+</div>
+

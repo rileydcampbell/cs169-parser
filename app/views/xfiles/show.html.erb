@@ -2,7 +2,7 @@
 <div class="content-container">
 
   <div class="back">
-    <%= link_to 'Back to file list', xfiles_path %>
+    <%= link_to 'Back to all files', xfiles_path %>
   </div>
 
   <div class="label_title">
@@ -51,7 +51,7 @@
                IDK RIGHT NOW NEED TO FIX TIME TO DEBUG
             </td>
             <td>
-              <%= link_to "Edit Property", edit_xfile_path(@xfile.id, prop: group.prop) %>
+              <%= link_to "Edit Property", edit_xfile_path(@xfile.id, prop: group.prop, groupid: group.id) %>
             </td>
           </tr>
         </table>
@@ -71,7 +71,7 @@
   <div class="prop_container">
     <% @properties.each do |prop| %>
       <div class="prop-button drop-shadow">
-        <%= link_to "#{prop[0]}", shared_files_path(prop[0]) %>
+        <%= link_to "#{prop}", shared_files_path(prop) %>
       </div>
     <% end %>
   </div>
