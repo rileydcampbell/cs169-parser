@@ -10,7 +10,7 @@
       <% @groups.each do |group| %>
         <tr class="drop-shadow">
           <td id="<%= "group_#{group.id}".to_s %>">
-            <%= link_to "More about #{group.name}", group_path(group) %>\
+            <%= link_to "#{group.name}", group_path(group) %>\
           </td>
         </tr>
       <% end %>
@@ -18,7 +18,6 @@
     </table>
   <% end %>
 </div>
-<%= link_to 'Add New Group', new_group_path %>
 <br>
-<%= link_to 'Back to File List', xfiles_path %>
+<%= link_to 'Back to All Files', xfiles_path %>
 

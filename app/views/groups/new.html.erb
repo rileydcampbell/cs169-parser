@@ -1,17 +1,17 @@
-<h1>Create New Group with this Property: <%= @key %></h1>
+<h1>Create New Group with this Property: <%= @prop %></h1>
 <%= form_tag groups_path, multipart: true do %>
-  <%= label :name, 'Group Name' %>
-  <%= text_field :name, nil, placeholder: 'name of the group'%>
+  <%= label :group, :name, 'Group Name' %>
+  <%= text_field :group, 'name', placeholder: 'Name of the Group'%>
 
   <div class="label_title">
     Files (Select Files)
-    <% @file_names.each do |xfile| %>
+    <% @xfiles.each do |xfile| %>
       <div class="drop-shadow">
-        <%= check_box_tag 'xfile_id[]', xfile.id -%>
+        <%= check_box_tag 'xfile_id[]', xfile.id, true -%>
         <%= link_to xfile.name, xfile_path(xfile) %>
       </div>
   <% end %>
-    <%= hidden_field_tag :prop , @key %>
+    <%= hidden_field_tag :prop , @prop %>
     <%= submit_tag 'Create' %>
   </div>
 

@@ -21,6 +21,10 @@ class XfilesController < ApplicationController
   def index
     @xfiles = Xfile.all
     shared_props(Xfile.ids)
+    if @xfiles.empty?
+      shared_props = {}
+    end
+
   end
 
   # default: render 'new' template
@@ -154,7 +158,7 @@ class XfilesController < ApplicationController
           non_unique_props[prop] = count
         end
       @shared_set = non_unique_props
-    end
+      end
   end
 
   def download_xfile
