@@ -48,13 +48,13 @@
         </span>
       </td>
     </tr>
-    <% @shared_set.each do |property|  %>
+    <% @shared_set.each_pair do |property, count|  %>
     <tr>
       <td>
         <%= property %>
       </td>
       <td>
-        Placeholder number
+        <%= count %>
       </td>
       <td>
         <%= link_to "edit", shared_files_path(property) %>
