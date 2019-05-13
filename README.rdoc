@@ -12,13 +12,13 @@ CalTest Central is the file parsing and grouping app for making data consistent 
 To set up the app, please install and use Ruby version 2.4.0.
 Make sure to run bundle install to get the dependencies.
 
-To run the app, type `rails server` into the terminal and navigate to `localhost:3000`.
+To run the app, type <code>rails server</code> into the terminal and navigate to <code>localhost:3000</code>.
 
 To reset the database, run
-```bash
+<code>
 $ rake db:reset
 $ rake db:migrate
-```
+</code>
 
 === Usage
 
