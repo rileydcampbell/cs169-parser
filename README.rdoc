@@ -3,28 +3,68 @@
 {<img src="https://travis-ci.org/rileydcampbell/cs169-parser.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/rileydcampbell/cs169-parser]
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# CalTest Central
 
-Things you may want to cover:
+CalTest Central is the file parsing and grouping app for making data consistent over CalCentral test files.
 
-* Ruby version
+## Setup
 
-* System dependencies
+To set up the app, please install and use Ruby version 2.4.0.
+Make sure to run bundle install to get the dependencies.
 
-* Configuration
+To run the app, type `rails server` into the terminal and navigate to `localhost:3000`.
 
-* Database creation
+To reset the database, run
+```bash
+$ rake db:reset
+$ rake db:migrate
+```
 
-* Database initialization
+## Usage
 
-* How to run the test suite
+### Uploading a file
+When you first load up the app, you will be directed to the index page. To upload a file, click the "New File" button which will direct you to the upload page.
 
-* Services (job queues, cache servers, search engines, etc.)
+In the upload page, you can upload one file or multiple files. 
+* For individual files, you can choose a name. If you do not enter a name, the name will default to the name of the file.
+* For multiple files the app will just default each file to the name of the file.
 
-* Deployment instructions
+After you upload a file, you can see it in the index.
 
-* ...
+### File information
+To see the contents of a file as well as its properties, click the file's name in the index and it will take you to the information page.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Here you can see the contents, the groups it is a part of, all its properties, and a graph displaying its properties.
+
+You can also delete the file by clicking the "Delete File" button.
+
+### Grouping
+
+Grouping is facilitated through shared properties between files. 
+
+After uploading several files, you will be able to see shared properties among them on the index page. These properties show up in at least two files.
+
+Once you choose a property you would like to group by, click "see more" for that property and you will be directed to more information about that property such as groups with that property and which files have that property. If you would like to create a group for files with that property, click the "create group" button and you will be directed to the grouping page.
+
+At this point, you can unselect any files you would not like in the group. You can also choose a name for the group. If you do not explicitly state a name, the name will default to the grouping property's name. Once satisfied, click "Create" and the group will be saved into the database.
+
+### Editing a property
+
+Because the app's purpose is to make data consistent across test files, when you edit a property, the change will register for all other files that are grouped by that property.
+
+To do this:
+* Click on the file in the index
+* Select "edit property" for the property you would like to edit, which is bound by a group
+* Multiple groups can be bound by the same property, so you will be able to select which group you would like to edit.
+* Enter the new value for that property, which will replace the old one.
+* click "Save"
+* Now your edit should be registered across all files in that group.
+
+### File download
+
+To download a file, just click the download link for that file in the index.
+
+## Future features
+
+* highlighting the properties in a file's contents
+* More user-friendly UI
