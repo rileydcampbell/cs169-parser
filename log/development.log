@@ -12516,3 +12516,44 @@ Processing by XfilesController#shared_files as HTML
   [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'b')[0m
   Rendered xfiles/shared_files.erb within layouts/application (2.5ms)
 Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-05-13 16:54:41 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 16:54:42 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 488ms (Views: 435.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups" for ::1 at 2019-05-13 16:54:47 -0700
+Processing by GroupsController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "groups"[0m
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups"
+  Rendered groups/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 68ms (Views: 33.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups" for ::1 at 2019-05-13 16:55:17 -0700
+Processing by GroupsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "groups"[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"
+  Rendered groups/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/groups" for ::1 at 2019-05-13 16:55:17 -0700
+Processing by GroupsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "groups"[0m
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups"
+  Rendered groups/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.3ms)
