@@ -1,36 +1,46 @@
-<div class="label_title">
-  Group
-</div>
 
-<div class="card-header">
-  Name:
-  <%= @group.name %>
-</div>
+<div class="content-container">
 
-<div class="card-header">
-  Property Grouped By:
-  <%= @group.prop%>
-</div>
-
-  <div class="label_title">
-    Files
-    <% @xfiles.each do |xfile| %>
-      <div class="drop-shadow">
-        <%= link_to xfile.name, xfile_path(xfile) %>
-      </div>
-    <% end %>
+  <div class= "back">
+    <%= link_to 'Back to Groups', groups_path %>
   </div>
 
-<div class= "back">
-  <%= link_to "Edit Property", edit_xfile_path(@xfiles[0], prop: @group.prop, groupid: @group.id), :class => "button primary drop-shadow"%>
-</div>
+  <div class="label_title">
+    <%= @group.name %>
+  </div>
+  <div class="spacing-small"></div>
+  <div class="">
+    Shared property: <%= @group.prop%>
+  </div>
+  <div class="spacing-large"></div>
 
-<div>
-  <%= button_to 'Delete Group', group_path(@group), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
-</div>
-<div class= "back">
-  <%= link_to 'Back to All Groups', groups_path %>
-  <br>
-  <%= link_to 'Back to All Files', xfiles_path %>
-</div>
+    <div class="label_title">
+      Files
+    </div>
+    <div class="spacing-small"></div>
 
+  <%= form_tag shared_props_path,:id => "xfile_form", :method => :get do %>
+    <table id="jsonfiles">
+      <tbody>
+
+      <% @xfiles.each do |xfile| %>
+        <tr class="drop-shadow">
+          <td id="<%= "xfile_#{xfile.id}".to_s %>">
+            <%= link_to "#{xfile.name}", xfile_path(xfile) %>
+            <span style="float: right;"> <%= link_to "download", download_xfile_path(xfile), data: { turbolinks: false } %> </span>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% end %>
+
+  <div class= "back">
+    <%= link_to "Update #{@group.prop}", edit_xfile_path(@xfiles[0], prop: @group.prop, groupid: @group.id)%>
+  </div>
+
+  <div>
+    <%= button_to 'Delete Group', group_path(@group), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
+  </div>
+
+</div>

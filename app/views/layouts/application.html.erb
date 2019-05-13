@@ -14,12 +14,15 @@
         <div class="message" id="notice">
           <%= flash[:notice] %>
         </div>
+        <div class="spacing-large"></div>
       <% elsif flash[:warning] %>
         <div class="message" id="warning">
           <%= flash[:warning] %>
         </div>
+        <div class="spacing-large"></div>
       <% end %>
       <%= yield %>
+
     </div>
   </body>
 </html>

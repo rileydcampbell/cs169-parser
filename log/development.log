@@ -9286,3 +9286,1733 @@ Processing by XfilesController#show as HTML
   Rendered xfiles/show.html.erb within layouts/application (96.0ms)
 Completed 200 OK in 248ms (Views: 235.8ms | ActiveRecord: 0.5ms)
 >>>>>>> upstream/master
+
+
+Started GET "/" for ::1 at 2019-05-13 14:53:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:53:09 -0700
+
+SyntaxError (/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:135: syntax error, unexpected <<, expecting keyword_end
+<<<<<<< HEAD
+  ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:141: syntax error, unexpected ||, expecting keyword_end
+||||||| merged common ancestors
+  ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:147: syntax error, unexpected ===, expecting keyword_end
+=======
+   ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:154: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> upstream/master
+  ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:156: syntax error, unexpected <<, expecting keyword_end
+<<<<<<< HEAD
+  ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:176: syntax error, unexpected ||, expecting keyword_end
+||||||| merged common ancestors
+  ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:179: syntax error, unexpected ===, expecting keyword_end
+=======
+   ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:182: syntax error, unexpected >>, expecting keyword_end
+>>>>>>> upstream/master
+  ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/controllers/xfiles_controller.rb:232: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/xfiles_controller.rb:135: syntax error, unexpected <<, expecting keyword_end
+  app/controllers/xfiles_controller.rb:141: syntax error, unexpected ||, expecting keyword_end
+  app/controllers/xfiles_controller.rb:147: syntax error, unexpected ===, expecting keyword_end
+  app/controllers/xfiles_controller.rb:154: syntax error, unexpected >>, expecting keyword_end
+  app/controllers/xfiles_controller.rb:156: syntax error, unexpected <<, expecting keyword_end
+  app/controllers/xfiles_controller.rb:176: syntax error, unexpected ||, expecting keyword_end
+  app/controllers/xfiles_controller.rb:179: syntax error, unexpected ===, expecting keyword_end
+  app/controllers/xfiles_controller.rb:182: syntax error, unexpected >>, expecting keyword_end
+  app/controllers/xfiles_controller.rb:232: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (165.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (138.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (297.2ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:54:08 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.8ms)
+
+SyntaxError (/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/views/xfiles/index.html.erb:90: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/views/xfiles/index.html.erb:92: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/xfiles/index.html.erb:90: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/xfiles/index.html.erb:92: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (91.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (83.2ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (181.6ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:54:59 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 463ms (Views: 460.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-6234c02ffcb58d74d272e2b73c5b06e33354207f0ab010e51fc68b5d0cdadf96.css?body=1" for ::1 at 2019-05-13 14:55:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 14:55:00 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 14:55:00 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 14:55:00 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 14:55:00 -0700
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:55:16 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/xfiles/1" for ::1 at 2019-05-13 14:55:17 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mXfile Load (0.2ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (1.2ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?[0m  [["xfile_id", 1]]
+  Rendered xfiles/show.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 100ms (Views: 51.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/d3_graph.self-466c5261726807ae4f2de644e3a317bf7ae156cc5be6a3192b6c903008ad0d1b.js?body=1" for ::1 at 2019-05-13 14:55:17 -0700
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:55:19 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.3ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 77ms (Views: 71.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/xfiles/2" for ::1 at 2019-05-13 14:55:19 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?  [["xfile_id", 2]]
+  Rendered xfiles/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:55:21 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/xfiles/4" for ::1 at 2019-05-13 14:55:22 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mXfile Load (0.2ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?[0m  [["xfile_id", 4]]
+  Rendered xfiles/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles/4" for ::1 at 2019-05-13 14:55:55 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?[0m  [["xfile_id", 4]]
+  Rendered xfiles/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:56:20 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:56:45 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.2ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:57:03 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:57:16 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:57:43 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/groups" for ::1 at 2019-05-13 14:57:51 -0700
+Processing by GroupsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "groups"[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"
+  Rendered groups/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:57:53 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (3.0ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 64ms (Views: 54.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:58:22 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:58:30 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.0ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.0ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 14:58:38 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-05-13 15:04:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:04:53 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 814ms (Views: 761.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:04:57 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:05:56 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:06:05 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:06:41 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:06:54 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:07:07 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:07:07 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:07:19 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:07:19 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:08:07 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:08:08 -0700
+
+
+Started GET "/assets/application.self-fb7ae91878178eeccebef2cd912cf800aa60c34771efdd9946ea2afaff35a831.css?body=1" for ::1 at 2019-05-13 15:08:08 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:08:08 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:08:08 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:08:08 -0700
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:08:29 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:08:29 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:08:44 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:08:55 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:09:04 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4b8Elo6Jl/v7dG5M1QGA2B1h9JLLIn9DpkKcpu5tk0/VlyDsWimd3ryLcFcYU/PiR+o907njKOMkaQqzR1Iog==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:09:04 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:10:16 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1876f92bc58d0963418ee33d200a0f295d4ecbe52a796d2bdd94d8d5d08c07d2.css?body=1" for ::1 at 2019-05-13 15:10:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:10:16 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:10:16 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:10:16 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:10:16 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:10:18 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DlnhQ7DdeGYIM2Y/YazISUqlGSmBYJp2jS1vJ72OV9smiUHSW4/4Tp0smkcOmYGFo882DISrnygPJcF/6yqpNA==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:10:18 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:10:18 -0700
+
+
+Started GET "/assets/application.self-1876f92bc58d0963418ee33d200a0f295d4ecbe52a796d2bdd94d8d5d08c07d2.css?body=1" for ::1 at 2019-05-13 15:10:18 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:10:18 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:10:18 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:10:18 -0700
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:10:42 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a348c32615792b2f8380ff0a2d74b55c9ad8900d0024ccc29253c99183502f7a.css?body=1" for ::1 at 2019-05-13 15:10:42 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:10:46 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kj9lH35RaoS+78P0kQR8IHlKQACJst9S+aUI73VNbk6678WOlQPqrCvwP4z+MTXskCBvJYx52gx7raa3I+mQoQ==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:10:46 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:11:17 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-5d4c21266cec36768c77c6c4ed20ab2db521a00fe8b2cddac957e9100fd576f4.css?body=1" for ::1 at 2019-05-13 15:11:17 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:11:19 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZyViernBThRz++FGehmwu2+9EQdUCnR4O164mp8LZsZP9cLrUpPOPObkHT4VLPl3htc+IlHBcSa5VhbCya+YKQ==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:11:19 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:11:29 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e35efd965bbecedbac6e9c75e23d28afd0a884e13d8c778528301d033e63e8a2.css?body=1" for ::1 at 2019-05-13 15:11:30 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:11:31 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q5/XXFCq3fGj/rOzO6ljBtZCSBMUnDRmHxZFWSatzaZrT3fNu/hd2TbhT8tUnCrKPyhnNhFXMTidHusBcAkzSQ==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:11:31 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:06 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:12:08 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IEkANzDkDhw1yRSYnVgTp2dBA0KmhMISX2In8T9Q48QImaCm27aONKDW6ODybVprjissZ6NPx0zdaompafQdKw==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:08 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:16 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:12:18 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PGwnR/jJ7cJGJ1SPK55N2/YLgyoN3d6pSzSl1+jkqG8UvIfWE5tt6tM4qPdEqwQXH2GsDwgW2/fJPAuPvkBWgA==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:18 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:34 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-975945cda3fcbc537add8245f14c270a76e7e83c937885de76fc95e2a333a959.css?body=1" for ::1 at 2019-05-13 15:12:34 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:12:35 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XaR5mo69W61Jb7AAQi1VtixcD6/5CHQJ8wpVCFzBM6V1dNkLZe/bhdxwTHgtGBx6xTYgivzDcVdxAvtQCmXNSg==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:35 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:55 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2a78b0af150b40bfccf170d7d03d4d2ac96e3456eff54e8e0f71468e72923ed8.css?body=1" for ::1 at 2019-05-13 15:12:56 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:12:57 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vU7dWoPbefTLblPD7iDj0/AtER9txGu2wHXZWczUpj6Vnn3LaIn53F5xr7uBFaofGUc+OmgPbuhCfXcBmnBY0Q==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:12:57 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:18:37 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 106ms (Views: 102.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4f2a9eeefd841b2e3ba5058e27aff3488beedf5a755519b220c56f4368810d04.css?body=1" for ::1 at 2019-05-13 15:18:37 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:18:39 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TBPXUV3nRxDShN5yoFjC83tF24utA6BHwz5eSDFPgwdkw3fAtrXHOEebIgrPbYs/ki/0rqjIpRlBNvAQZ+t96A==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:18:39 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:19:07 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-25ba216310de50c0e614c36c87edb86ccc68e0239d7d7db41eb4a30314f24167.css?body=1" for ::1 at 2019-05-13 15:19:07 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:19:09 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pKPyXszdB9hmlcn1W1nHYIKLXHwd1gXLue6TZWoMS6SMc1LPJ4+H8POKNY00bI6sa+FzWRgdAJU75j09PKi1Sw==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:19:09 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:20:06 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:20:08 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xpfD6Q61yAch7/Rfscs0kWNd5kmKenPg95NgKRiATTnuR2N45edIL7TwCCfe/n1dijfJbI+xdr51m85xTiSz1g==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:20:08 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:21:11 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:21:12 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wG4TW2UHazp/vXvr3uhzXL7MaQ5H0sqqyejXNNZEIb/ovrPKjlXrEuqih5Ox3TqQV6ZGK0IZz/RL4HlsgODfUA==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:21:12 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:21:59 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9ec4a30885a68cc2134bbae9df32c978e97214fbc72719530ed25475d39e8c67.css?body=1" for ::1 at 2019-05-13 15:21:59 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:22:01 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+QeIEYBGezTkbNAdfviwnyKLxaOj+mk4TFRmRqR7/7bR1yiAaxT7HHFzLGURzflTy+HqhqYxbGbOXMge8t8BWQ==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:22:01 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:22:25 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-61350b49161a749ca11a32ea89056f023bc388a7e9ef74f0aa7a1735bfe2e270.css?body=1" for ::1 at 2019-05-13 15:22:26 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:22:28 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+6DgMPaSr2ESItj7fC8z7PmH5PWDn5BT+s4GQfYJDybTcEChHcAvSYc9JIMTGnogEO3L0IZUlQ14xqgZoK3xyQ==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:22:28 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:22:36 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d807a6c0cf7f6eee6b20b0b5e24383ad2d99a01866b61e6d49d177f78bbce139.css?body=1" for ::1 at 2019-05-13 15:22:36 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:22:37 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gEzVvkvGBxoVuf+nbz8iI7uR2lrTFafLtnXDzE4YFnuonHUvoJSHMoCmA98ACmvvUvv1f9beopU0fW2UGLzolA==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:22:37 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:23:31 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:23:33 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:23:34 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vidBGoo0qkNVyRcsT/dI8WeHslzjWNvY92/BDNXZQIaW9+GLYWYqa8DW61QgwgE9ju2deeaT3oZ1Z29Ug32+aQ==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:23:34 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:24:31 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a8f68ca0f75e5ad178d3a60a0b8dd4851e832eb1f0e1fe69c9a4934b7db66a28.css?body=1" for ::1 at 2019-05-13 15:24:31 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:24:33 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GthbxD3Q5WS5vHgTqmuymC8bW94GoihEYjAnGoR5r20yCPtV1oJlTCyjhGvFXvtUxnF0+wNpLRrgOIlC0t1Rgg==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:24:33 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:25:38 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c039582bafbdeeb9204e1851118d9b9314820a79c646a1a1972ea438396ec490.css?body=1" for ::1 at 2019-05-13 15:25:38 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:25:39 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HVVEej/piV9JqRqGRkRlXF5HvO2WAn0dvIeSxv8sQMc1heTr1LsJd9y25v4pcSyQty2TyJPJeEM+jzyeqYi+KA==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:25:39 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:25:47 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fb30774d0dd485b19adafc24d7d07c8131a1bc0953cb63681b8138f4af349875.css?body=1" for ::1 at 2019-05-13 15:25:47 -0700
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:25:48 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mj8+9r35OVOUbyTM1zFj/0KjXl7hTz4+OvztrwZJJ64a755nVqu5ewFw2LS4BCozq8lxe+SEO2C49EP3UO3ZQQ==", "xfile"=>{"name"=>""}, "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:25:48 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/xfiles" for ::1 at 2019-05-13 15:26:09 -0700
+Processing by XfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7BkD/dDdpUDo3C03tUSkCZMxj5MooK6esPZ7n0RyZ6rEyaNsO48laH3D0U/ace3Felugti1rq8Ay/tXHEtaZRQ==", "xfile"=>{"name"=>""}, "content"=>[#<ActionDispatch::Http::UploadedFile:0x007fea2a28c848 @tempfile=#<Tempfile:/var/folders/74/h9w1k3nj1txbgr747r58x5z00000gn/T/RackMultipart20190513-22099-tg8uce.jpg>, @original_filename="dz2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"content[]\"; filename=\"dz2.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Import"}
+Redirected to http://localhost:3000/xfiles/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/xfiles/new" for ::1 at 2019-05-13 15:26:09 -0700
+Processing by XfilesController#new as HTML
+  Rendered xfiles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-13 15:26:12 -0700
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:26:12 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.3ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 31.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:26:18 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[35mXfile Load (0.3ms)[0m  SELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')
+  [1m[36mGroup Load (1.0ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'a')[0m
+  Rendered xfiles/shared_files.erb within layouts/application (10.6ms)
+Completed 200 OK in 89ms (Views: 37.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:26:26 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (3.4ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 86ms (Views: 54.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:27:36 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'a')[0m
+  Rendered xfiles/shared_files.erb within layouts/application (5.5ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:27:46 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[35mXfile Load (0.3ms)[0m  SELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'a')[0m
+  Rendered xfiles/shared_files.erb within layouts/application (6.8ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:27:57 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'a')[0m
+  Rendered xfiles/shared_files.erb within layouts/application (5.5ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:28:05 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[35mXfile Load (0.3ms)[0m  SELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')
+  [1m[36mGroup Load (0.4ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'a')[0m
+  Rendered xfiles/shared_files.erb within layouts/application (11.0ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:28:18 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'a')[0m
+  Rendered xfiles/shared_files.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:28:58 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE (prop = 'a')[0m
+  Rendered xfiles/shared_files.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:29:13 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:29:24 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:30:07 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:30:13 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:30:50 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:30:50 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:30:50 -0700
+
+
+Started GET "/assets/application.self-fb30774d0dd485b19adafc24d7d07c8131a1bc0953cb63681b8138f4af349875.css?body=1" for ::1 at 2019-05-13 15:30:50 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:30:50 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:30:50 -0700
+
+
+Started GET "/" for ::1 at 2019-05-13 15:30:58 -0700
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:30:58 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.3ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.2ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 27.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/xfiles/1" for ::1 at 2019-05-13 15:31:15 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.5ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?  [["xfile_id", 1]]
+  Rendered xfiles/show.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 56ms (Views: 44.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:31:18 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[36mXfile Load (0.3ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')[0m
+  [1m[35mGroup Load (1.7ms)[0m  SELECT "groups".* FROM "groups" WHERE (prop = 'a')
+  Rendered xfiles/shared_files.erb within layouts/application (6.2ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/xfiles/1" for ::1 at 2019-05-13 15:31:38 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?  [["xfile_id", 1]]
+  Rendered xfiles/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:31:40 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:31:51 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/xfiles/1" for ::1 at 2019-05-13 15:31:54 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mXfile Load (0.3ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?[0m  [["xfile_id", 1]]
+  Rendered xfiles/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:32:49 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:34:19 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:34:41 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:34:50 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-05-13 15:35:12 -0700
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:35:12 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 51ms (Views: 46.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:35:40 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:35:42 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:35:49 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:35:50 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:35:51 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:36:05 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:36:54 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-fb30774d0dd485b19adafc24d7d07c8131a1bc0953cb63681b8138f4af349875.css?body=1" for ::1 at 2019-05-13 15:36:54 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:36:54 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:36:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:36:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:36:54 -0700
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:36:56 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:37:56 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:37:56 -0700
+
+
+Started GET "/assets/application.self-fb30774d0dd485b19adafc24d7d07c8131a1bc0953cb63681b8138f4af349875.css?body=1" for ::1 at 2019-05-13 15:37:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:37:56 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:37:56 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:37:56 -0700
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:37:58 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:39:09 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/views/groups/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  app/views/groups/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.7ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.9ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (106.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (227.3ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:39:28 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered groups/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/views/groups/show.html.erb:47: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  app/views/groups/show.html.erb:47: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.6ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (175.5ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:39:37 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered groups/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/admin/Documents/school/berkeley/classes/cs169/project/cs169-parser/app/views/groups/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  app/views/groups/show.html.erb:46: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.8ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/admin/.rvm/gems/ruby-2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (182.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:40:39 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:40:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:40:39 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:40:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:40:39 -0700
+
+
+Started GET "/assets/application.self-fb30774d0dd485b19adafc24d7d07c8131a1bc0953cb63681b8138f4af349875.css?body=1" for ::1 at 2019-05-13 15:40:39 -0700
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:41:03 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles/1" for ::1 at 2019-05-13 15:41:14 -0700
+Processing by XfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mXfile Load (0.2ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" INNER JOIN "groups_xfiles" ON "groups"."id" = "groups_xfiles"."group_id" WHERE "groups_xfiles"."xfile_id" = ?[0m  [["xfile_id", 1]]
+  Rendered xfiles/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:42:25 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:42:25 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:42:25 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:42:25 -0700
+
+
+Started GET "/assets/application.self-fb30774d0dd485b19adafc24d7d07c8131a1bc0953cb63681b8138f4af349875.css?body=1" for ::1 at 2019-05-13 15:42:25 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:42:25 -0700
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:42:27 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:42:29 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:42:30 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:42:48 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:43:38 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-05-13 15:43:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-05-13 15:43:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-05-13 15:43:39 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-05-13 15:43:39 -0700
+
+
+Started GET "/assets/application.self-fb30774d0dd485b19adafc24d7d07c8131a1bc0953cb63681b8138f4af349875.css?body=1" for ::1 at 2019-05-13 15:43:39 -0700
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:44:21 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:44:34 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:45:19 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:47:02 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?[0m  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:47:15 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:48:12 -0700
+Processing by XfilesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT "xfiles"."id" FROM "xfiles"
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "xfiles"[0m
+  [1m[35mXfile Load (0.2ms)[0m  SELECT "xfiles".* FROM "xfiles"
+  Rendered xfiles/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 43ms (Views: 38.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/xfiles/shared_files/a" for ::1 at 2019-05-13 15:48:15 -0700
+Processing by XfilesController#shared_files as HTML
+  Parameters: {"prop"=>"a"}
+  [1m[36mXfile Load (0.3ms)[0m  [1mSELECT "xfiles".* FROM "xfiles" WHERE (content like '%"a"%')[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups" WHERE (prop = 'a')
+  Rendered xfiles/shared_files.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/groups/1" for ::1 at 2019-05-13 15:48:17 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mXfile Load (0.3ms)[0m  SELECT "xfiles".* FROM "xfiles" INNER JOIN "groups_xfiles" ON "xfiles"."id" = "groups_xfiles"."xfile_id" WHERE "groups_xfiles"."group_id" = ?  [["group_id", 1]]
+  Rendered groups/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:48:21 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:49:18 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:50:14 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:51:00 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:51:07 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:51:49 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:51:57 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:52:16 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:52:17 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:52:19 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:52:36 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:52:54 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:53:04 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/xfiles/1/edit?groupid=1&prop=a" for ::1 at 2019-05-13 15:53:52 -0700
+Processing by XfilesController#edit as HTML
+  Parameters: {"groupid"=>"1", "prop"=>"a", "id"=>"1"}
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered xfiles/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/xfiles" for ::1 at 2019-05-13 15:54:06 -0700
+Processing by XfilesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT "xfiles"."id" FROM "xfiles"[0m
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mXfile Load (0.1ms)[0m  SELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mXfile Load (0.1ms)[0m  [1mSELECT  "xfiles".* FROM "xfiles" WHERE "xfiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "xfiles"
+  [1m[36mXfile Load (0.2ms)[0m  [1mSELECT "xfiles".* FROM "xfiles"[0m
+  Rendered xfiles/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 67ms (Views: 62.4ms | ActiveRecord: 1.0ms)

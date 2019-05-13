@@ -1,29 +1,36 @@
 <% # in app/views/jsonfiles/show.html.haml %>
 <div class="content-container">
 
-  <div class="label_title">
-    Edit File
-  </div>
-  <%= form_tag edit_post_path(@id) do %>
-    <%= label_tag :xfile, :property %>
-    <%= text_field_tag :property, @prop[0], readonly: true %>
-
-    <%= label_tag(:xfile, :value) %>
-    <%= text_field_tag :value, @prop[1] %>
-
-    <div class="label_title">
-      Group to Edit
-        <div class="drop-shadow">
-          <%= check_box_tag 'group_id[]', @group.id, true-%>
-          <%= @group.name -%>
-        </div>
-    </div>
-    <br>
-    <%= submit_tag 'save' , :class => "button primary drop-shadow"%>
-  <% end %>
-
   <div class="back">
     <%= link_to 'Back to All Files', xfiles_path %>
   </div>
 
+  <div class="content-card drop-shadow">
+    <%= form_tag edit_post_path(@id) do %>
+      <div class="spacing-medium"></div>
+
+      <div class="label_title">Edit Files</div>
+      <div class="spacing-medium"></div>
+
+      Update property <span style="font-weight: bold"> <%= @group.prop %> </span> for all files in group <span style="font-weight: bold"> <%= @group.name %> </span><br>
+      <div class="spacing-large"></div>
+
+      <%= label :xfile, :name, 'property' %>
+      <div class="spacing-small"></div>
+
+      <%= text_field_tag :property, @prop[0], readonly: true %>
+      <div class="spacing-large"></div>
+
+      <%= label_tag(:xfile, :value) %>
+      <div class="spacing-small"></div>
+
+      <%= text_field_tag :value, @prop[1] %>
+      <div class="spacing-medium"></div>
+
+      <%= submit_tag 'Update', :class => 'button primary' %>
+    <% end %>
+    <div class="spacing-medium"></div>
+  </div>
 </div>
+
+

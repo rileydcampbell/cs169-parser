@@ -1,9 +1,11 @@
 <% #  This file is app/views/xiles/index.html.haml %>
 
 <div class="content-container">
+  <div class="spacing-large"></div>
   <div class="label_title">
     Uploaded Files
   </div>
+  <div class="spacing-small"></div>
     <%= form_tag shared_props_path,:id => "xfile_form", :method => :get do %>
     <table id="jsonfiles">
     <tbody>
@@ -11,23 +13,26 @@
       <% @xfiles.each do |xfile| %>
         <tr class="drop-shadow">
           <td id="<%= "xfile_#{xfile.id}".to_s %>">
-            <%= link_to "#{xfile.name}", xfile_path(xfile) %> \
-            <%= link_to "Download", download_xfile_path(xfile), data: { turbolinks: false } %>
+            <%= link_to "#{xfile.name}", xfile_path(xfile) %>
+            <span style="float: right;"> <%= link_to "download", download_xfile_path(xfile), data: { turbolinks: false } %> </span>
           </td>
         </tr>
         <% end %>
     </tbody>
     </table>
     <% end %>
+
   <a href="/xfiles/new">
     <div class="button primary drop-shadow">
      New File
     </div>
   </a>
 
+  <div class="spacing-large"></div>
   <div class="label_title">
     Shared Properties
   </div>
+  <div class="spacing-small"></div>
 
   <table class="table drop-shadow">
     <tr>
@@ -47,34 +52,19 @@
         </span>
       </td>
     </tr>
-<<<<<<< HEAD
-    <% @shared_set.each_pair do |property, number|  %>
-||||||| merged common ancestors
-    <% @shared_set.each do |property|  %>
-=======
+
     <% @shared_set.each_pair do |property, count|  %>
->>>>>>> upstream/master
+
     <tr>
       <td>
         <%= property %>
       </td>
       <td>
-<<<<<<< HEAD
-        <%= number %>
-||||||| merged common ancestors
-        Placeholder number
-=======
+
         <%= count %>
->>>>>>> upstream/master
       </td>
       <td>
-<<<<<<< HEAD
-        <%= link_to "view", shared_files_path(property) %>
-||||||| merged common ancestors
-        <%= link_to "edit", shared_files_path(property) %>
-=======
         <%= link_to "See More", shared_files_path(property) %>
->>>>>>> upstream/master
       </td>
     </tr>
     <% end %>

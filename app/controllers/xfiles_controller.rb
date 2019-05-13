@@ -132,55 +132,15 @@ class XfilesController < ApplicationController
       end
       @file_names.append(current_xfile)
     end
-<<<<<<< HEAD
-    non_unique_props = Hash.new()
-    prop_sets.each_pair do |prop, count|
-      if count > 1
-        non_unique_props[prop] = count
-      end
-||||||| merged common ancestors
-
-    shared_set = prop_sets[0]
-
-    prop_sets.each do |set|
-      shared_set = shared_set & set
-=======
 
     shared_set = prop_sets[0]
 
 
     prop_sets.each do |set|
       shared_set = shared_set & set
->>>>>>> upstream/master
     end
-<<<<<<< HEAD
-    @shared_set = non_unique_props
-
-    # prop_sets = []
-    # @file_names = []
-    # xfile_ids.each do |id|
-    #   current_xfile = Xfile.find(id.to_i)
-    #   content = current_xfile.content
-    #   properties = Xfile.get_properties_from_string(content)
-    #   prop_sets.push(properties)
-    #   @file_names.append(current_xfile)
-    # end
-    #
-    # shared_set = prop_sets[0]
-    #
-    # prop_sets.each do |set|
-    #   shared_set = shared_set & set
-    # end
-    #
-    # @shared_set = shared_set
-||||||| merged common ancestors
-
-    @shared_set = shared_set
-=======
 
     @shared_set = shared_set.nil? ? [] : shared_set
->>>>>>> upstream/master
-
   end
 
   def shared_props(xfile_ids)

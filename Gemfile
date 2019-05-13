@@ -85,3 +85,5 @@ end
 gem 'd3_rails', '~> 4.1', '>= 4.1.1'
 gem "actionview", ">= 4.2.11.1"
 gem "activejob", ">= 4.2.11"
+
+gem 'font-awesome-sass', '~> 5.8.1'
