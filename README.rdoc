@@ -6,6 +6,7 @@
 == CalTest Central
 
 CalTest Central is the file parsing and grouping app for making data consistent over CalCentral test files.
+The workflow is upload files -> group files -> edit files
 
 == Setup
 
