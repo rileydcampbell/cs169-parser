@@ -22,9 +22,9 @@ class XfilesController < ApplicationController
     @xfiles = Xfile.all
     shared_props(Xfile.ids)
     if @xfiles.empty?
-      shared_props = {}
+      @shared_props = Hash.new()
+      @shared_set = Hash.new()
     end
-
   end
 
   # default: render 'new' template
@@ -133,7 +133,6 @@ class XfilesController < ApplicationController
     prop_sets.each do |set|
       shared_set = shared_set & set
     end
-
     @shared_set = shared_set.nil? ? [] : shared_set
 
   end
@@ -171,7 +170,11 @@ class XfilesController < ApplicationController
     # f.write(eval(@xfile.content).to_json)
     # f.close
     data = eval(content).to_json
-    send_data data, :filename => "#{@xfile.name}.json"
+    if @xfile.name.include? '.json'
+      send_data data, :filename => "#{@xfile.name}"
+    else
+      send_data data, :filename => "#{@xfile.name}.json"
+    end
     # send_file "#{Rails.root}/app/assets/docs/#{@xfile.name}.json", type: "application/json", x_sendfile: true
     flash[:notice] = "#{@xfile.name} was successfully downloaded."
   end
