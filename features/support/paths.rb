@@ -17,6 +17,13 @@ module NavigationHelpers
 
     when /^file upload page$/i
       new_xfile_path()
+
+    when /^'Create New Group' page$/i
+      new_group_path()
+
+    when /^'shared files' page for property '(.+)'$/i
+      shared_files_path($1)
+
     when /^shared properties page$/i
       shared_props_path()
     when /^products index page$/i
@@ -28,11 +35,13 @@ module NavigationHelpers
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
 
-    when /^the edit page for "(.*)"$/i
+    when /^edit page for "(.+)"$/i
       edit_xfile_path(Xfile.find_by_name($1))
 
-    when /^the details page for "(.*)"$/i
-      xfile_path(Xfile.find_by_name($1))
+    when /^details page for '(.+)'$/i
+      xfile = Xfile.find_by_name($1)
+      puts(xfile)
+      xfile_path(1)
 
     else
       begin
