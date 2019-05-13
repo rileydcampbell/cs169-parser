@@ -1,20 +1,26 @@
-<h1>Create New Group</h1>
+<div class="label_title">
+  Create New Group with this Property: <%= @prop %>
+</div>
 <%= form_tag groups_path, multipart: true do %>
   <%= label :group, :name, 'Group Name' %>
-  <%= text_field :group, 'name' %>
-
+  <%= text_field :group, 'name', placeholder: 'Name of the group'%>
   <div class="label_title">
-    Files
-    <% @file_names.each do |xfile| %>
+    <br>
+    Files (Select Files)
+    <% @xfiles.each do |xfile| %>
       <div class="drop-shadow">
-        <%= check_box_tag 'xfile_id[]', xfile.id -%>
+        <%= check_box_tag 'xfile_id[]', xfile.id, true -%>
         <%= link_to xfile.name, xfile_path(xfile) %>
       </div>
   <% end %>
-    <%= submit_tag 'Create' %>
+    <br>
+    <%= hidden_field_tag :prop , @prop %>
+    <%= submit_tag 'Create', :class => "button primary drop-shadow"%>
   </div>
 
 <% end %>
-<%= link_to 'Back to Group List', groups_path %>
-<%= link_to 'Back to File List', xfiles_path %>
+<br>
+<%= link_to 'Back to All Groups', groups_path %>
+<br>
+<%= link_to 'Back to All Files', xfiles_path %>
 

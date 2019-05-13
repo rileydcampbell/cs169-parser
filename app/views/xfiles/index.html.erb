@@ -11,8 +11,7 @@
       <% @xfiles.each do |xfile| %>
         <tr class="drop-shadow">
           <td id="<%= "xfile_#{xfile.id}".to_s %>">
-            <%= check_box_tag 'xfile_id[]', xfile.id -%>
-            <%= link_to "#{xfile.name}", xfile_path(xfile) %>
+            <%= link_to "#{xfile.name}", xfile_path(xfile) %> \
             <%= link_to "Download", download_xfile_path(xfile), data: { turbolinks: false } %>
           </td>
         </tr>
@@ -48,24 +47,42 @@
         </span>
       </td>
     </tr>
+<<<<<<< HEAD
     <% @shared_set.each_pair do |property, number|  %>
+||||||| merged common ancestors
+    <% @shared_set.each do |property|  %>
+=======
+    <% @shared_set.each_pair do |property, count|  %>
+>>>>>>> upstream/master
     <tr>
       <td>
         <%= property %>
       </td>
       <td>
+<<<<<<< HEAD
         <%= number %>
+||||||| merged common ancestors
+        Placeholder number
+=======
+        <%= count %>
+>>>>>>> upstream/master
       </td>
       <td>
+<<<<<<< HEAD
         <%= link_to "view", shared_files_path(property) %>
+||||||| merged common ancestors
+        <%= link_to "edit", shared_files_path(property) %>
+=======
+        <%= link_to "See More", shared_files_path(property) %>
+>>>>>>> upstream/master
       </td>
     </tr>
     <% end %>
   </table>
 
-  <%#= link_to 'Get Shared Properties', "", :onclick => "$('#xfile_form').submit()" %>
+  <%#= link_to 'Get Shared Properties', "", :onclick   => "$('#xfile_form').submit()" %>
   <br>
 
   <br>
-  <%#= link_to 'Group List', groups_path %>
+  <%= link_to 'List of All Groups', groups_path %>
 </div>

@@ -1,7 +1,15 @@
-<h1>Group</h1>
+<div class="label_title">
+  Group
+</div>
 
 <div class="card-header">
+  Name:
   <%= @group.name %>
+</div>
+
+<div class="card-header">
+  Property Grouped By:
+  <%= @group.prop%>
 </div>
 
   <div class="label_title">
@@ -13,6 +21,16 @@
     <% end %>
   </div>
 
-<%= link_to 'Back to Group List', groups_path %>
-<%= link_to 'Back to File List', xfiles_path %>
+<div class= "back">
+  <%= link_to "Edit Property", edit_xfile_path(@xfiles[0], prop: @group.prop, groupid: @group.id), :class => "button primary drop-shadow"%>
+</div>
+
+<div>
+  <%= button_to 'Delete Group', group_path(@group), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
+</div>
+<div class= "back">
+  <%= link_to 'Back to All Groups', groups_path %>
+  <br>
+  <%= link_to 'Back to All Files', xfiles_path %>
+</div>
 

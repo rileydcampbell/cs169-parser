@@ -2,7 +2,7 @@
 <div class="content-container">
 
   <div class="back">
-    <%= link_to 'Back to file list', xfiles_path %>
+    <%= link_to 'Back to all files', xfiles_path %>
   </div>
 
   <div class="label_title">
@@ -23,32 +23,89 @@
   <div class="label_title">
     Groups
   </div>
-
-  <table>
-
     <% @groups.each do |group| %>
       <tr>
-        <div class="drop-shadow">
-          <%= link_to group.name, group_path(group) %>
-        </div>
+
+<<<<<<< HEAD
+
+||||||| merged common ancestors
+
+  <table>
+    <tr>
+      <th>
+        Key
+      </th>
+      <th>
+        Value
+      </th>
+    </tr>
+
+
+      <% @properties.each do |prop| %>
+      <tr>
+        <td>
+          <%= prop[0] %>
+        </td>
+        <td>
+          <%= prop[1] %>
+        </td>
+        <td>
+          <%= link_to "edit", edit_xfile_path(@xfile.id, prop: prop) %>
+        </td>
       </tr>
-    <% end %>
+      <% end %>
 
   </table>
 
 
+=======
+        <table>
+          <tr>
+            <th>
+              Group
+            </th>
+            <th>
+              Property
+            </th>
+            <th>
+<!--              Value-->
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div class="drop-shadow">
+                <%= link_to group.name, group_path(group) %>
+              </div>
+            </td>
+            <td>
+              <%= group.prop %>
+            </td>
+            <td>
+<!--               IDK RIGHT NOW NEED TO FIX TIME TO DEBUG-->
+            </td>
+            <td>
+              <%= link_to "Edit Property", edit_xfile_path(@xfile.id, prop: group.prop, groupid: group.id) %>
+            </td>
+          </tr>
+        </table>
+      </tr>
+    <% end %>
+
+
+
+>>>>>>> upstream/master
   <div class="label_title">
-    Properties
+    All Properties
   </div>
 
   <p>
-    Click on property to show files that have share this property
+    Click on property to show other files that share this property
   </p>
 
   <div class="prop_container">
     <% @properties.each do |prop| %>
       <div class="prop-button drop-shadow">
-        <%= link_to "#{prop[0]}", shared_files_path(prop[0]) %>
+        <%= link_to "#{prop}", shared_files_path(prop) %>
       </div>
     <% end %>
   </div>
@@ -72,7 +129,6 @@
 
 
   <%= button_to 'Delete File', xfile_path(@xfile), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
-
 
 </div>
 

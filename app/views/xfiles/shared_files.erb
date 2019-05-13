@@ -2,22 +2,44 @@
 
 <div class="content-container">
   <div class="label_title">
-    Files with this property
+    Files with this property: <%= @prop%>
   </div>
-  <%= form_tag new_group_path,:id => "group_form", :method => :get do %>
+  <%= form_tag new_group_path, :id => "group_form", :method => :get do %>
     <table id="jsonfiles">
       <tbody>
-       <% @xfiles.each do |xfile| %>
+      Click file for more info
+      <% @xfiles.each do |xfile| %>
          <tr class="drop-shadow">
            <td>
-             <%= check_box_tag 'xfile_id[]', xfile.id -%>
              <%= link_to "#{xfile.name}", xfile_path(xfile) %>
           </td>
         </tr>
       <% end %>
      </tbody>
     </table>
+    <%= hidden_field_tag :prop , @prop %>
   <% end %>
-  <%= link_to 'All files', xfiles_path %>
-  <%= link_to 'Add New Group', "", :onclick => "$('#group_form').submit()" %>
+
+  <div class="label_title">
+    Groups with this property: <%= @prop%>
+  </div>
+    <table id="jsonfiles">
+      <tbody>
+      Click group for more info
+      <% @groups.each do |group| %>
+      <tr class="drop-shadow">
+        <td>
+          <%= link_to "#{group.name}", group_path(group) %>
+        </td>
+      </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+<div>
+  <%= link_to 'Create New Group', new_group_path(:prop => @prop), :class => "button primary drop-shadow" %>
+  <br>
+  <%= link_to 'Back to All Files', xfiles_path %>
 </div>
+</div>
+

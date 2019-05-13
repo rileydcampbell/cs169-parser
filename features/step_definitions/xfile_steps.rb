@@ -6,17 +6,17 @@ end
 
 When /^(?:|I )upload a json file$/ do
   attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', 'sample1.json'))
-  click_button "import"
+  click_button "Import"
 end
 
 When /^(?:|I )upload a xml file$/ do
   attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', 'sample2.xml'))
-  click_button "import"
+  click_button "Import"
 end
 
 When /^(?:|I )upload an invalid file$/ do
   attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', 'sample3.txt'))
-  click_button "import"
+  click_button "Import"
 end
 
 Given /^(?:|I )visit the (.+)$/ do |page_name|
@@ -48,7 +48,7 @@ And(/^I should be sent to the (.+)$/) do |page_name|
 end
 
 When(/^I don't upload a file$/) do
-  click_button "import"
+  click_button "Import"
 end
 When /I check the following file: (.*)/ do |field|
   page.all('[id^="xfile_"]').each do |el|
