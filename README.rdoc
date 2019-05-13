@@ -1,13 +1,13 @@
 {<img src="https://api.codeclimate.com/v1/badges/02a925f8fcab4b681b5f/maintainability" />}[https://codeclimate.com/github/rileydcampbell/cs169-parser/maintainability]
 {<img src="https://api.codeclimate.com/v1/badges/02a925f8fcab4b681b5f/test_coverage" />}[https://codeclimate.com/github/rileydcampbell/cs169-parser/test_coverage]
 {<img src="https://travis-ci.org/rileydcampbell/cs169-parser.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/rileydcampbell/cs169-parser]
-== README
+= README
 
-# CalTest Central
+== CalTest Central
 
 CalTest Central is the file parsing and grouping app for making data consistent over CalCentral test files.
 
-## Setup
+== Setup
 
 To set up the app, please install and use Ruby version 2.4.0.
 Make sure to run bundle install to get the dependencies.
@@ -20,9 +20,9 @@ $ rake db:reset
 $ rake db:migrate
 ```
 
-## Usage
+=== Usage
 
-### Uploading a file
+==== Uploading a file
 When you first load up the app, you will be directed to the index page. To upload a file, click the "New File" button which will direct you to the upload page.
 
 In the upload page, you can upload one file or multiple files. 
@@ -31,14 +31,14 @@ In the upload page, you can upload one file or multiple files.
 
 After you upload a file, you can see it in the index.
 
-### File information
+==== File information
 To see the contents of a file as well as its properties, click the file's name in the index and it will take you to the information page.
 
 Here you can see the contents, the groups it is a part of, all its properties, and a graph displaying its properties.
 
 You can also delete the file by clicking the "Delete File" button.
 
-### Grouping
+==== Grouping
 
 Grouping is facilitated through shared properties between files. 
 
@@ -48,7 +48,7 @@ Once you choose a property you would like to group by, click "see more" for that
 
 At this point, you can unselect any files you would not like in the group. You can also choose a name for the group. If you do not explicitly state a name, the name will default to the grouping property's name. Once satisfied, click "Create" and the group will be saved into the database.
 
-### Editing a property
+==== Editing a property
 
 Because the app's purpose is to make data consistent across test files, when you edit a property, the change will register for all other files that are grouped by that property.
 
@@ -60,11 +60,11 @@ To do this:
 * click "Save"
 * Now your edit should be registered across all files in that group.
 
-### File download
+==== File download
 
 To download a file, just click the download link for that file in the index.
 
-## Future features
+== Future features
 
 * highlighting the properties in a file's contents
 * More user-friendly UI
