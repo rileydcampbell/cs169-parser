@@ -19,54 +19,56 @@
         </pre>
       </li>
     </div>
+  <div class="spacing-large"></div>
 
   <div class="label_title">
     Groups
   </div>
-    <% @groups.each do |group| %>
-      <tr>
+  <div class="spacing-medium"></div>
+<!--  ---------------------------------------------------------------------- -->
 
-        <table>
-          <tr>
-            <th>
-              Group
-            </th>
-            <th>
-              Property
-            </th>
-            <th>
-<!--              Value-->
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <div class="drop-shadow">
-                <%= link_to group.name, group_path(group) %>
-              </div>
-            </td>
-            <td>
-              <%= group.prop %>
-            </td>
-            <td>
-<!--               IDK RIGHT NOW NEED TO FIX TIME TO DEBUG-->
-            </td>
-            <td>
-              <%= link_to "Edit Property", edit_xfile_path(@xfile.id, prop: group.prop, groupid: group.id) %>
-            </td>
-          </tr>
-        </table>
+  <table class="table drop-shadow">
+      <tr>
+        <td>
+          <span style="font-weight: bold;">
+            Group
+          </span>
+        </td>
+        <td>
+          <span style="font-weight: bold;">
+            Property
+          </span>
+        </td>
+        <td>
+          <span style="font-weight: bold;">
+            <!-- value -->
+          </span>
+        </td>
       </tr>
+
+    <% @groups.each do |group| %>
+          <tr>
+            <td><%= link_to group.name, group_path(group) %></td>
+
+            <td><%= group.prop %></td>
+
+            <td><%= link_to "edit", edit_xfile_path(@xfile.id, prop: group.prop, groupid: group.id) %></td>
+          </tr>
     <% end %>
+  </table>
+  <div class="spacing-large"></div>
+
+
 
 
 
   <div class="label_title">
     All Properties
   </div>
+  <div class="spacing-small"></div>
 
-  <p>
-    Click on property to show other files that share this property
-  </p>
+  Click on property to show other files that share this property
+  <div class="spacing-medium"></div>
 
   <div class="prop_container">
     <% @properties.each do |prop| %>
@@ -75,27 +77,18 @@
       </div>
     <% end %>
   </div>
-
-  <div class="label_title">
-    Graph of Properties
-  </div>
-
-  <p>
-    Click and drag to pan, scroll up and down to zoom.
-  </p>
-  <script>
-      // pull json to use in d3 graph visualization
-      let jsonString = document.getElementById('json-content').innerText;
-      var jsonObj = JSON.parse(jsonString);
-      let prettyJSON = JSON.stringify(jsonObj, undefined, 4);
-      document.getElementById('json-content').innerText = prettyJSON;
-  </script>
-  <%= javascript_include_tag "https://d3js.org/d3.v5.min.js" %>
-  <%= javascript_include_tag "d3_graph" %>
-
+  <div class="spacing-large"></div>
 
   <%= button_to 'Delete File', xfile_path(@xfile), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
-
+  <div class="spacing-large"></div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        let jsonString = document.getElementById('json-content').innerText;
+        var jsonObj = JSON.parse(jsonString);
+        let prettyJSON = JSON.stringify(jsonObj, undefined, 4);
+        document.getElementById('json-content').innerText = prettyJSON;
+    });
+</script>
 

@@ -6,14 +6,27 @@
   </a>
   <div class="content-card drop-shadow">
     <%= form_tag xfiles_path, multipart: true do %>
+      <div class="spacing-medium"></div>
+
       <div class="label_title">Upload Files</div>
+      <div class="spacing-medium"></div>
+
         Please upload files you want analyzed <br>
+      <div class="spacing-large"></div>
+
       <%= label :xfile, :name, 'File Name' %>
+      <div class="spacing-small"></div>
+
       <%= text_field :xfile, 'name', placeholder: 'Optional'%>
+      <div class="spacing-large"></div>
+
       <%= label :xfile, 'content', 'File(s)' %>
+      <div class="spacing-small"></div>
       <%= file_field_tag 'content[]', :multiple => true , :style => "padding-bottom: 10px"%> <br>
+      <div class="spacing-medium"></div>
       <%= submit_tag 'Import', :class => 'button primary' %>
     <% end %>
+    <div class="spacing-medium"></div>
   </div>
 </div>
 

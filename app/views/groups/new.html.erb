@@ -1,26 +1,41 @@
-<div class="label_title">
-  Create New Group with this Property: <%= @prop %>
-</div>
-<%= form_tag groups_path, multipart: true do %>
-  <%= label :group, :name, 'Group Name' %>
-  <%= text_field :group, 'name', placeholder: 'Name of the group'%>
-  <div class="label_title">
-    <br>
-    Files (Select Files)
-    <% @xfiles.each do |xfile| %>
-      <div class="drop-shadow">
-        <%= check_box_tag 'xfile_id[]', xfile.id, true -%>
-        <%= link_to xfile.name, xfile_path(xfile) %>
+<div class="content-container">
+  <div class="content-card">
+
+    <div class="label_title">Create New Group</div>
+    <div class="spacing-medium"></div>
+
+    <%= form_tag groups_path, multipart: true do %>
+
+      <%= label :xfile, 'Group name:' %>
+      <div class="spacing-small"></div>
+
+      <%= text_field :group, 'name', placeholder: 'Name of the group'%>
+      <div class="spacing-large"></div>
+
+      <div class="label_title">
+        Files
       </div>
-  <% end %>
-    <br>
-    <%= hidden_field_tag :prop , @prop %>
-    <%= submit_tag 'Create', :class => "button primary drop-shadow"%>
-  </div>
 
-<% end %>
-<br>
-<%= link_to 'Back to All Groups', groups_path %>
-<br>
-<%= link_to 'Back to All Files', xfiles_path %>
+      <div class="spacing-small"></div>
+      Select which files you want in this group
+      <div class="spacing-medium"></div>
 
+        <% @xfiles.each do |xfile| %>
+          <div class="drop-shadow">
+            <%= check_box_tag 'xfile_id[]', xfile.id, true -%>
+            <%= link_to xfile.name, xfile_path(xfile) %>
+          </div>
+        <div class="spacing-small"></div>
+        <% end %>
+        <br>
+        <%= hidden_field_tag :prop , @prop %>
+        <%= submit_tag 'Create', :class => "button primary drop-shadow"%>
+      </div>
+
+    <% end %>
+
+  <br>
+  <%= link_to 'Back to All Groups', groups_path %>
+  <br>
+  <%= link_to 'Back to All Files', xfiles_path %>
+</div>

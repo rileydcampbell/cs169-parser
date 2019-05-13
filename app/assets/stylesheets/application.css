@@ -78,10 +78,8 @@ table {
     padding: 4px;
 }
 form label {
-    display: block;
-    line-height: 25px;
     font-weight: bold;
-    color: maroon;
+    color: var(--text-grey);
 }
 
 button,
@@ -353,4 +351,16 @@ text.id {
 
 .spacing-large {
     height: 20px;
+}
+
+.message {
+    display: flex;
+    background-color: var(--delete-red);
+    height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+    justify-content: center;
 }

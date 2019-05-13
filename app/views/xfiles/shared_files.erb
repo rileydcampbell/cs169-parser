@@ -1,9 +1,15 @@
                                       <% #  This file is app/views/xiles/shared_files.html.haml %>
 
 <div class="content-container">
+
+  <%= link_to 'Back to All Files', xfiles_path %>
+  <div class="spacing-large"></div>
+
   <div class="label_title">
     Files with this property: <%= @prop%>
   </div>
+  <div class="spacing-small"></div>
+
   <%= form_tag new_group_path, :id => "group_form", :method => :get do %>
     <table id="jsonfiles">
       <tbody>
@@ -19,10 +25,13 @@
     </table>
     <%= hidden_field_tag :prop , @prop %>
   <% end %>
+  <div class="spacing-large"></div>
 
   <div class="label_title">
     Groups with this property: <%= @prop%>
   </div>
+  <div class="spacing-small"></div>
+
     <table id="jsonfiles">
       <tbody>
       Click group for more info
@@ -37,9 +46,7 @@
     </table>
 
 <div>
-  <%= link_to 'Create New Group', new_group_path(:prop => @prop), :class => "button primary drop-shadow" %>
-  <br>
-  <%= link_to 'Back to All Files', xfiles_path %>
+  <%= link_to 'Create New Group', new_group_path(:prop => @prop) %>
 </div>
 </div>
 
