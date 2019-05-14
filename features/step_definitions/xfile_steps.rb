@@ -83,6 +83,10 @@ Then(/^I should see the file upload page again$/) do
   visit path_to("file upload page")
 end
 
+Then(/^I should see the 'Create New Group' page$/) do
+  visit path_to("'Create New Group' page")
+end
+
 Then(/^I should see the products index page again$/) do
   visit path_to("products index page")
 end
