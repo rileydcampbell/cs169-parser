@@ -16,12 +16,28 @@ When("I click 'Delete File'") do
   click_button "Delete File"
 end
 
+And(/^I click on the group info link for '(.+)'$/) do |group|
+  visit path_to(group)
+end
+
 When("I click 'Create'") do
   click_button "Create"
 end
 
+And("I click 'Delete Group'") do
+  click_button "Delete Group"
+end
+
+And("I click 'Back to All Files'") do
+  click_link "Back to All Files"
+end
+
+And("I click 'List of All Groups'") do
+  click_link 'List of All Groups'
+end
+
 And("I click 'Create New Group'") do
-  click_button "Create New Group"
+  click_link "Create New Group"
 end
 
 When("I click 'download'") do
@@ -83,12 +99,20 @@ Then(/^I should see the file upload page again$/) do
   visit path_to("file upload page")
 end
 
+Then(/^I should see the groups index page$/) do
+  visit path_to("groups index page")
+end
+
 Then(/^I should see the 'Create New Group' page$/) do
   visit path_to("'Create New Group' page")
 end
 
 Then(/^I should see the products index page again$/) do
   visit path_to("products index page")
+end
+
+Then(/^I should see the groups index page again$/) do
+  visit path_to("groups index page")
 end
 
 Then /^I should receive a file(?: '([^"]*)')?/ do |file|

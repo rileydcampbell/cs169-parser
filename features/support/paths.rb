@@ -15,17 +15,30 @@ module NavigationHelpers
 
     when /^the (FileParser )?home\s?page$/ then '/xfiles'
 
+    when /^group index page$/i
+      groups_path()
+
+    when /^group (.+)$/i
+      group_path(1)
+
     when /^file upload page$/i
       new_xfile_path()
 
     when /^'Create New Group' page$/i
       new_group_path()
 
+    when /^groups index page$/i
+      groups_path()
+
     when /^'shared files' page for property '(.+)'$/i
       shared_files_path($1)
 
     when /^shared properties page$/i
       shared_props_path()
+
+    when /^groups index page$/i
+      groups_path()
+
     when /^products index page$/i
       xfiles_path()
 

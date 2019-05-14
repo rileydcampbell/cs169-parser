@@ -34,3 +34,10 @@ Feature: json and xml file upload
     When I click 'download'
     Then I should receive a file 'sample4.json'
 
+  Scenario: Seeing Shared props
+    Given the database is empty
+    Given I visit the file upload page
+    When I upload 'sample1.json'
+    And I visit the details page for 'sample1'
+    Then I should see "a"
+
