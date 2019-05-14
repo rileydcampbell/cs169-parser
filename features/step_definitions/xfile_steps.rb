@@ -1,17 +1,31 @@
-Given(/^the following files exist:$/) do |xfiles_table|
-  xfiles_table.hashes.each do |xfile|
-    Xfile.create xfile
-  end
-end
-
-When /^(?:|I )upload a json file$/ do
-  attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', 'sample1.json'))
+When(/^I upload '(.+)'$/) do |file_name|
+  attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', file_name))
   click_button "Import"
 end
 
-When /^(?:|I )upload a xml file$/ do
-  attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', 'sample2.xml'))
-  click_button "Import"
+Given("the database is empty") do
+  Xfile.delete_all
+end
+
+# When /^(?:|I )upload an xml file$/ do
+#   attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', 'sample2.xml'))
+#   click_button "Import"
+# end
+
+When("I click 'Delete File'") do
+  click_button "Delete File"
+end
+
+When("I click 'Create'") do
+  click_button "Create"
+end
+
+And("I click 'Create New Group'") do
+  click_button "Create New Group"
+end
+
+When("I click 'download'") do
+  click_link "download"
 end
 
 When /^(?:|I )upload an invalid file$/ do
@@ -50,6 +64,7 @@ end
 When(/^I don't upload a file$/) do
   click_button "Import"
 end
+
 When /I check the following file: (.*)/ do |field|
   page.all('[id^="xfile_"]').each do |el|
     if el.value != nil
@@ -66,4 +81,16 @@ end
 
 Then(/^I should see the file upload page again$/) do
   visit path_to("file upload page")
+end
+
+Then(/^I should see the products index page again$/) do
+  visit path_to("products index page")
+end
+
+Then /^I should receive a file(?: '([^"]*)')?/ do |file|
+  result = page.response_headers['Content-Type'].should == "application/json"
+  if result
+    result = page.response_headers['Content-Disposition'].should =~ /#{file}/
+  end
+  result
 end

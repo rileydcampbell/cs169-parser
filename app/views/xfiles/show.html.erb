@@ -45,14 +45,38 @@
           </span>
         </td>
       </tr>
-
     <% @groups.each do |group| %>
+        <table>
           <tr>
+            <th>
+              Group
+            </th>
+            <th>
+              Property
+            </th>
+            <!-- <th>
+              Value
+            </th> -->
+          </tr>
             <td><%= link_to group.name, group_path(group) %></td>
 
             <td><%= group.prop %></td>
 
             <td><%= link_to "edit", edit_xfile_path(@xfile.id, prop: group.prop, groupid: group.id) %></td>
+            <td>
+              <div class="drop-shadow">
+                <%= link_to group.name, group_path(group) %>
+              </div>
+            </td>
+            <td>
+              <%= group.prop %>
+            </td>
+           <!--  <td>
+               IDK RIGHT NOW NEED TO FIX TIME TO DEBUG
+            </td> -->
+            <td>
+              <%= link_to "Edit Property", edit_xfile_path(@xfile.id, prop: group.prop, groupid: group.id) %>
+            </td>
           </tr>
     <% end %>
   </table>
