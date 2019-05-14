@@ -24,8 +24,8 @@ And("I click 'Create New Group'") do
   click_button "Create New Group"
 end
 
-When("I click 'Download'") do
-  click_link "Download"
+When("I click 'download'") do
+  click_link "download"
 end
 
 When /^(?:|I )upload an invalid file$/ do

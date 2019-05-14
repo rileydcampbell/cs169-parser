@@ -31,6 +31,6 @@ Feature: json and xml file upload
     Given the database is empty
     Given I visit the file upload page
     When I upload 'sample4.json'
-    When I click 'Download'
+    When I click 'download'
     Then I should receive a file 'sample4.json'
 
