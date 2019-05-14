@@ -18,6 +18,7 @@ Feature: json and xml file upload
      And I should see the file upload page again
 
   Scenario: Deleting a file
+    Given the database is empty
     Given I visit the file upload page
     When I upload 'sample1.json'
     And I visit the details page for 'sample1'
@@ -27,6 +28,7 @@ Feature: json and xml file upload
 
 
   Scenario: Downloading a file
+    Given the database is empty
     Given I visit the file upload page
     When I upload 'sample4.json'
     When I click 'Download'
