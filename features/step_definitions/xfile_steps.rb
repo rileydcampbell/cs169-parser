@@ -3,6 +3,10 @@ When(/^I upload '(.+)'$/) do |file_name|
   click_button "Import"
 end
 
+Given("the database is empty") do
+  Xfile.delete_all
+end
+
 # When /^(?:|I )upload an xml file$/ do
 #   attach_file('content[]', File.join(RAILS_ROOT, 'features', 'upload-files', 'sample2.xml'))
 #   click_button "Import"

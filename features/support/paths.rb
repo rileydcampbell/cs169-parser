@@ -39,8 +39,6 @@ module NavigationHelpers
       edit_xfile_path(Xfile.find_by_name($1))
 
     when /^details page for '(.+)'$/i
-      xfile = Xfile.find_by_name($1)
-      puts(xfile)
       xfile_path(1)
 
     else
