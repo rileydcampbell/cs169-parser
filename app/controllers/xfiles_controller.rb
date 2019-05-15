@@ -137,16 +137,12 @@ class XfilesController < ApplicationController
     id = params[:id]
     @xfile = Xfile.find(id)
     content = @xfile.content
-    # f = File.new("#{Rails.root}/app/assets/docs/#{@xfile.name}.json", "w+")
-    # f.write(eval(@xfile.content).to_json)
-    # f.close
     data = eval(content).to_json
     if @xfile.name.include? '.json'
       send_data data, :filename => "#{@xfile.name}"
     else
       send_data data, :filename => "#{@xfile.name}.json"
     end
-    # send_file "#{Rails.root}/app/assets/docs/#{@xfile.name}.json", type: "application/json", x_sendfile: true
     flash[:notice] = "#{@xfile.name} was successfully downloaded."
   end
 
