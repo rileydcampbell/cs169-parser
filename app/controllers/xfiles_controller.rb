@@ -44,23 +44,27 @@ class XfilesController < ApplicationController
         @extension = @name.split('.').last
         if @extension == "json"
           @data = Crack::JSON.parse(@xfile)
-        elsif @extension == "xml"
-          @data = Crack::XML.parse(@xfile)
         else
           flash[:notice] = "Incompatible file type, please attach a valid file"
           redirect_to new_xfile_path and return
         end
         @xfile = Xfile.create!(xfile_params) do |xfile|
-          xfile.content = @data
-          if xfile.name.empty?
-            xfile.name = @name
-          end
+          read_xfile(xfile, @data, @name)
         end
         flash[:notice] = "#{@xfile.name} was successfully created."
       end
       redirect_to xfiles_path
     end
   end
+
+
+  def read_xfile(xfile, data, name)
+    xfile.content = data
+    if xfile.name.empty?
+      xfile.name = name
+    end
+  end
+
 
   #To edit the file, should populate a table of its group.
   def edit
@@ -72,8 +76,6 @@ class XfilesController < ApplicationController
   end
 
   def edit_file(xfile, prop, val)
-    puts "value should not be nil and " + val
-    puts "property should not be nil and " + prop
     data = xfile.content
     data = eval(data)
     data[prop] = val
@@ -82,9 +84,6 @@ class XfilesController < ApplicationController
 
   #Edit both selected files and its group
   def edit_post
-    # id = params[:id] # retrieve movie ID from URI route
-    # edit_file(Xfile.find(id), params[:property], params[:value])
-
     params[:group_id].each do |group_id|
       group = Group.find(group_id)
       group.xfiles.each do |xfile|
@@ -108,31 +107,6 @@ class XfilesController < ApplicationController
     render 'shared_files'
   end
 
-  # def get_shared_props(xfile_ids)
-  #   prop_sets = Hash.new()
-  #   @file_names = []
-  #   xfile_ids.each do |id|
-  #     current_xfile = Xfile.find(id.to_i)
-  #     content = current_xfile.content
-  #     properties = Xfile.get_properties_from_string(content)
-  #     properties.each do |prop|
-  #       if prop_sets.key?(prop)
-  #         prop_sets[prop] += 1
-  #       else
-  #         prop_sets[prop] = 1
-  #       end
-  #     end
-  #     @file_names.append(current_xfile)
-  #   end
-
-  #   shared_set = prop_sets[0]
-
-
-  #   prop_sets.each do |set|
-  #     shared_set = shared_set & set
-  #   end
-  #   @shared_set = shared_set.nil? ? [] : shared_set
-  # end
 
   def shared_props(xfile_ids)
       prop_sets = Hash.new()
